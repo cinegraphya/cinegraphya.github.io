@@ -853,5 +853,489 @@ window.addEventListener('load',sendH);
 window.addEventListener('resize',sendH);
 new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,attributes:true});
 </script>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CINEGRAPHYA — POPUP DE QUALIFICAÇÃO DE LEAD
+     EmailJS: serviço gratuito de envio de e-mail via JS
+     Dispara após 10 segundos OU 40% de scroll
+═══════════════════════════════════════════════════════════════ -->
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+/* ── Overlay ── */
+#cg-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,8,6,.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: cgFadeIn .35s ease;
+}
+#cg-popup-overlay.active { display: flex; }
+@keyframes cgFadeIn { from{opacity:0} to{opacity:1} }
+
+/* ── Card ── */
+#cg-popup {
+  background: #0f0d0b;
+  border: 1px solid rgba(201,150,122,.25);
+  border-radius: 6px;
+  max-width: 480px;
+  width: 100%;
+  padding: 2.2rem 2rem 1.8rem;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0,0,0,.7);
+  animation: cgSlideUp .4s cubic-bezier(.22,1,.36,1);
+}
+@keyframes cgSlideUp { from{transform:translateY(28px);opacity:0} to{transform:translateY(0);opacity:1} }
+
+/* ── Close ── */
+#cg-popup-close {
+  position: absolute;
+  top: 1rem; right: 1.2rem;
+  background: none; border: none;
+  color: rgba(255,255,255,.35);
+  font-size: 1.3rem; cursor: pointer;
+  line-height: 1; transition: color .2s;
+}
+#cg-popup-close:hover { color: #c9967a; }
+
+/* ── Logo mark ── */
+.cg-popup-brand {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin-bottom: 1.4rem;
+}
+.cg-popup-brand-dot {
+  width: 8px; height: 8px;
+  background: #c9967a;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.cg-popup-brand-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: .85rem;
+  font-weight: 400;
+  color: #c9967a;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* ── Greeting ── */
+.cg-popup-greeting {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #f5ede8;
+  line-height: 1.3;
+  margin-bottom: .5rem;
+}
+.cg-popup-greeting em { font-style: italic; color: #c9967a; }
+
+.cg-popup-sub {
+  font-size: .85rem;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+/* ── Label ── */
+.cg-label {
+  font-family: 'Jost', 'Helvetica Neue', sans-serif;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(201,150,122,.8);
+  display: block;
+  margin-bottom: .55rem;
+}
+
+/* ── Checkbox group ── */
+.cg-checks {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+  margin-bottom: 1.4rem;
+}
+.cg-check-label {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  cursor: pointer;
+  font-size: .88rem;
+  color: rgba(255,255,255,.7);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  transition: color .2s;
+}
+.cg-check-label:hover { color: #e8cfc4; }
+.cg-check-label input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: #c9967a;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── WhatsApp field ── */
+.cg-field-group { margin-bottom: 1.4rem; }
+.cg-input {
+  width: 100%;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(201,150,122,.25);
+  border-radius: 3px;
+  padding: .7rem 1rem;
+  color: #f5ede8;
+  font-family: 'Jost', sans-serif;
+  font-size: .9rem;
+  font-weight: 300;
+  outline: none;
+  transition: border-color .2s;
+  box-sizing: border-box;
+}
+.cg-input::placeholder { color: rgba(255,255,255,.25); }
+.cg-input:focus { border-color: rgba(201,150,122,.6); }
+
+/* ── Divider ── */
+.cg-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,150,122,.2), transparent);
+  margin: 1.2rem 0;
+}
+
+/* ── CTA text ── */
+.cg-cta-text {
+  font-size: .82rem;
+  color: rgba(255,255,255,.45);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+/* ── Buttons ── */
+.cg-btn-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  width: 100%;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: .85rem;
+  font-family: 'Jost', sans-serif;
+  font-size: .82rem;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s;
+  margin-bottom: .7rem;
+}
+.cg-btn-wa:hover { background: #1da851; }
+
+.cg-btn-send {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 1px solid rgba(201,150,122,.35);
+  color: #c9967a;
+  border-radius: 3px;
+  padding: .7rem;
+  font-family: 'Jost', sans-serif;
+  font-size: .75rem;
+  font-weight: 400;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+}
+.cg-btn-send:hover {
+  background: rgba(201,150,122,.1);
+  border-color: rgba(201,150,122,.6);
+}
+
+/* ── Success state ── */
+#cg-popup-success {
+  display: none;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.cg-success-icon {
+  font-size: 2.5rem;
+  margin-bottom: .8rem;
+}
+.cg-success-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #c9967a;
+  margin-bottom: .4rem;
+}
+.cg-success-sub {
+  font-size: .82rem;
+  color: rgba(255,255,255,.45);
+  font-family: 'Jost', sans-serif;
+}
+
+/* ── Footer note ── */
+.cg-popup-footer {
+  font-size: .68rem;
+  color: rgba(255,255,255,.2);
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Jost', sans-serif;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  #cg-popup { padding: 1.8rem 1.4rem 1.4rem; }
+  .cg-popup-greeting { font-size: 1.15rem; }
+}
+</style>
+
+<!-- POPUP HTML -->
+<div id="cg-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="cg-popup-title">
+  <div id="cg-popup">
+
+    <button id="cg-popup-close" aria-label="Fechar">✕</button>
+
+    <!-- Brand -->
+    <div class="cg-popup-brand">
+      <div class="cg-popup-brand-dot"></div>
+      <span class="cg-popup-brand-name">Cinegraphya</span>
+    </div>
+
+    <!-- Form -->
+    <div id="cg-popup-form">
+      <h2 class="cg-popup-greeting" id="cg-popup-title">
+        Olá! Bem-vindo à<br><em>Cinegraphya</em>
+      </h2>
+      <p class="cg-popup-sub">
+        Videomaker em BH com 15 anos de experiência.<br>
+        Me conta — que tipo de vídeo você precisa?
+      </p>
+
+      <!-- Q1: tipo de vídeo -->
+      <span class="cg-label">Que tipo de vídeo você precisa?</span>
+      <div class="cg-checks" id="cg-checks">
+        <label class="cg-check-label">
+          <input type="checkbox" name="tipo" value="Vídeos para Redes Sociais (Reels, Instagram, TikTok)">
+          Vídeos para Redes Sociais (Reels, Instagram)
+        </label>
+        <label class="cg-check-label">
+          <input type="checkbox" name="tipo" value="Cobertura de Evento Corporativo">
+          Cobertura de Evento Corporativo
+        </label>
+        <label class="cg-check-label">
+          <input type="checkbox" name="tipo" value="Vídeo Institucional para Empresa">
+          Vídeo Institucional para Empresa
+        </label>
+        <label class="cg-check-label">
+          <input type="checkbox" name="tipo" value="Filmagem com Drone">
+          Filmagem com Drone
+        </label>
+        <label class="cg-check-label">
+          <input type="checkbox" name="tipo" value="Gravação de Palestra ou Workshop">
+          Gravação de Palestra ou Workshop
+        </label>
+        <label class="cg-check-label">
+          <input type="checkbox" name="tipo" value="Outro / Ainda não sei">
+          Outro / Ainda não sei
+        </label>
+      </div>
+
+      <!-- Q2: WhatsApp -->
+      <div class="cg-field-group">
+        <span class="cg-label">Quer deixar seu WhatsApp? <span style="color:rgba(255,255,255,.25);font-size:.65rem;letter-spacing:0;text-transform:none">(opcional)</span></span>
+        <input type="tel" id="cg-whatsapp" class="cg-input"
+          placeholder="(31) 9 9999-9999"
+          maxlength="20">
+      </div>
+
+      <div class="cg-divider"></div>
+
+      <!-- Q3: falar agora -->
+      <p class="cg-cta-text">Prefere falar diretamente agora?</p>
+
+      <a id="cg-btn-wa"
+        href="https://api.whatsapp.com/send?phone=5531975059088&text=Olá!%20Vim%20pelo%20site%20da%20Cinegraphya%20e%20gostaria%20de%20um%20orçamento."
+        target="_blank" rel="noopener" class="cg-btn-wa">
+        💬 &nbsp;Falar pelo WhatsApp agora
+      </a>
+
+      <button class="cg-btn-send" id="cg-btn-send">
+        Enviar minhas respostas →
+      </button>
+
+      <p class="cg-popup-footer">
+        Suas informações são usadas apenas para entrar em contato sobre sua solicitação.
+      </p>
+    </div>
+
+    <!-- Success -->
+    <div id="cg-popup-success">
+      <div class="cg-success-icon">✦</div>
+      <div class="cg-success-title">Obrigado pelo contato!</div>
+      <p class="cg-success-sub">
+        Recebemos suas informações e entraremos em contato em breve.<br>
+        Ou clique abaixo para falar agora pelo WhatsApp.
+      </p>
+      <br>
+      <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
+        target="_blank" rel="noopener" class="cg-btn-wa" style="margin-top:.8rem">
+        💬 &nbsp;WhatsApp
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  /* ── Config ──────────────────────────────────────────────────────────
+     INSTRUÇÕES DE CONFIGURAÇÃO:
+     1. Crie conta gratuita em https://www.emailjs.com
+     2. Crie um Email Service (Gmail com contato@cinegraphya.com.br)
+     3. Crie um Email Template com as variáveis:
+        {{tipos_video}}, {{whatsapp}}, {{data_hora}}, {{pagina}}
+     4. Substitua os valores abaixo pelos seus IDs reais
+  ──────────────────────────────────────────────────────────────────── */
+  var EMAILJS_PUBLIC_KEY  = 'SEU_PUBLIC_KEY_AQUI';
+  var EMAILJS_SERVICE_ID  = 'SEU_SERVICE_ID_AQUI';
+  var EMAILJS_TEMPLATE_ID = 'SEU_TEMPLATE_ID_AQUI';
+  var TO_EMAIL            = 'contato@cinegraphya.com.br';
+
+  var overlay  = document.getElementById('cg-popup-overlay');
+  var closeBtn = document.getElementById('cg-popup-close');
+  var sendBtn  = document.getElementById('cg-btn-send');
+  var shown    = false;
+
+  /* Inicializar EmailJS */
+  if (typeof emailjs !== 'undefined') {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
+  /* ── Trigger: 10s OU 40% de scroll ── */
+  function showPopup() {
+    if (shown) return;
+    /* Não mostrar para visitas diretas por URL com hash */
+    if (window.location.hash) return;
+    shown = true;
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  var timer = setTimeout(showPopup, 10000);
+
+  window.addEventListener('scroll', function onScroll() {
+    var scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    if (scrolled >= 0.40) {
+      clearTimeout(timer);
+      showPopup();
+      window.removeEventListener('scroll', onScroll);
+    }
+  });
+
+  /* ── Fechar ── */
+  function closePopup() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    /* Marcar no sessionStorage para não mostrar novamente nessa visita */
+    try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
+  }
+
+  /* Não mostrar duas vezes na mesma sessão */
+  try {
+    if (sessionStorage.getItem('cg_popup_shown')) {
+      shown = true;
+      clearTimeout(timer);
+    }
+  } catch(e) {}
+
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closePopup();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePopup();
+  });
+
+  /* ── Coletar seleções ── */
+  function getChecked() {
+    var boxes = document.querySelectorAll('#cg-checks input[type="checkbox"]:checked');
+    var vals = [];
+    boxes.forEach(function(b) { vals.push(b.value); });
+    return vals.length ? vals.join(', ') : 'Nenhuma opção selecionada';
+  }
+
+  /* ── Enviar ── */
+  sendBtn.addEventListener('click', function() {
+    var tipos = getChecked();
+    var whatsapp = document.getElementById('cg-whatsapp').value.trim() || 'Não informado';
+    var now = new Date().toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
+
+    sendBtn.textContent = 'Enviando...';
+    sendBtn.disabled = true;
+
+    var templateParams = {
+      to_email:    TO_EMAIL,
+      tipos_video: tipos,
+      whatsapp:    whatsapp,
+      data_hora:   now,
+      pagina:      window.location.href,
+      reply_to:    TO_EMAIL,
+    };
+
+    /* Atualiza link do WhatsApp com tipo selecionado na mensagem */
+    var msgWa = encodeURIComponent(
+      'Olá! Vim pelo site da Cinegraphya. Tenho interesse em: ' + tipos
+    );
+    document.getElementById('cg-btn-wa').href =
+      'https://api.whatsapp.com/send?phone=5531975059088&text=' + msgWa;
+
+    function onSuccess() {
+      document.getElementById('cg-popup-form').style.display = 'none';
+      document.getElementById('cg-popup-success').style.display = 'block';
+      try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
+    }
+
+    function onError() {
+      /* Fallback: abre mailto se EmailJS falhar */
+      var body = 'Tipo de vídeo: ' + tipos +
+                 '%0AWhatsApp: ' + whatsapp +
+                 '%0AData: ' + now +
+                 '%0APágina: ' + window.location.href;
+      window.open('mailto:' + TO_EMAIL +
+        '?subject=Novo%20Lead%20-%20Site%20Cinegraphya&body=' + body, '_blank');
+      onSuccess();
+    }
+
+    if (typeof emailjs !== 'undefined' &&
+        EMAILJS_PUBLIC_KEY !== 'SEU_PUBLIC_KEY_AQUI') {
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(onSuccess, onError);
+    } else {
+      /* EmailJS não configurado ainda — usar mailto como fallback */
+      onError();
+    }
+  });
+
+})();
+</script>
+<!-- ═══════════════════════════════════════════════════════════════
+     /POPUP CINEGRAPHYA
+═══════════════════════════════════════════════════════════════ -->
+
 </body>
 </html>
