@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>César Thierry — Videomaker em BH | Cinegraphya</title>
+<meta name="description" content="César Thierry é videomaker em BH desde 2010. Sete anos com eventos sociais, depois virou para o mercado corporativo. Produziu para Globo, Band, Sebrae e Santa Casa. Fundador da Cinegraphya.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.cinegraphya.com.br/sobre">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://www.cinegraphya.com.br/sobre">
+<meta property="og:title" content="César Thierry — Videomaker em BH | Cinegraphya">
+<meta property="og:description" content="Videomaker profissional em BH desde 2010. Produções para Globo, Band, Sebrae e Santa Casa. Fundador da Cinegraphya.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Cinegraphya">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="César Thierry — Videomaker em BH | Cinegraphya">
+<meta name="twitter:description" content="Videomaker profissional em BH desde 2010. Produções para Globo, Band, Sebrae e Santa Casa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#0a0a0a">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.cinegraphya.com.br/sobre/#cesar-thierry",
+  "name": "César Thierry Freitas Nunes de Sousa",
+  "alternateName": "César Thierry",
+  "jobTitle": "Videomaker e Produtor Audiovisual",
+  "description": "Videomaker em Belo Horizonte desde 2010. Trabalhou com eventos sociais até 2017 e desde então atende exclusivamente empresas. Fundador da Cinegraphya LTDA. Produziu para Globo, Band, Sebrae e Santa Casa.",
+  "url": "https://www.cinegraphya.com.br/sobre",
+  "image": "https://www.cinegraphya.com.br/favicon.svg",
+  "email": "contato@cinegraphya.com.br",
+  "telephone": "+553197505-9088",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Santa Rita Durão, 444",
+    "addressLocality": "Belo Horizonte",
+    "addressRegion": "MG",
+    "postalCode": "30140-111",
+    "addressCountry": "BR"
+  },
+  "worksFor": {
+    "@type": "LocalBusiness",
+    "@id": "https://www.cinegraphya.com.br/#business",
+    "name": "Cinegraphya LTDA",
+    "url": "https://www.cinegraphya.com.br"
+  },
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Videomaker",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "Belo Horizonte"
+    },
+    "skills": "Produção audiovisual, filmagem 4K, edição de vídeo, drone DJI, vídeo institucional, cobertura de eventos, conteúdo para redes sociais"
+  },
+  "knowsAbout": [
+    "Produção audiovisual",
+    "Filmagem corporativa",
+    "Vídeo institucional",
+    "Cobertura de eventos",
+    "Filmagem com drone",
+    "Edição de vídeo profissional",
+    "Conteúdo para redes sociais",
+    "Videomaker em Belo Horizonte"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Belo Horizonte, MG, Brasil"
+  },
+  "sameAs": [
+    "https://www.instagram.com/cinegraphya",
+    "https://www.youtube.com/@cinegraphya"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Person",
+    "@id": "https://www.cinegraphya.com.br/sobre/#cesar-thierry",
+    "name": "César Thierry — Cinegraphya"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Mariana Alves"
+  },
+  "reviewBody": "César é um dos profissionais mais humanos, qualificados e competentes que temos. O capricho e o profissionalismo dele são de outra categoria.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Canal Empreender — Band / Sebrae"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  }
+}
+</script>
+<style>
+/* ── TOKENS ─────────────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:  #0a0806;
+  --bg2: #0f0d0b;
+  --bg3: #141210;
+  --bg4: #1a1714;
+  --white: #fbf8f2;
+  --body:  rgba(245,240,232,.72);
+  --muted: rgba(245,240,232,.38);
+  --gold:  #c9967a;
+  --gold2: rgba(201,150,122,.55);
+  --border: rgba(255,255,255,.07);
+  --border2: rgba(201,150,122,.25);
+}
+html{scroll-behavior:smooth;background:var(--bg);}
+body{font-family:'Barlow',sans-serif;font-size:15px;line-height:1.6;color:var(--body);background:var(--bg);overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+.w{max-width:1060px;margin:0 auto;padding:0 24px;}
+.hr{border:none;border-top:1px solid var(--border);margin:0;}
+
+/* ── NAV ─────────────────────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(10,8,6,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:background .3s;}
+.nav-inner{max-width:1060px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--white);}
+.nav-logo .g{color:var(--gold);}
+.nav-links{display:flex;align-items:center;gap:4px;}
+.nav-links a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:6px 12px;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--white);}
+.nav-cta{background:var(--gold);color:#0a0806;font-family:'Barlow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:8px 18px;border-radius:2px;transition:background .2s;white-space:nowrap;}
+.nav-cta:hover{background:#b07c60;color:#fff;}
+@media(max-width:700px){.nav-links{display:none;}}
+
+/* ── SOBRE ───────────────────────────────────────────────────────────── */
+
+/* ── SOBRE PAGE ───────────────────────────────────────── */
+.sobre-hero{padding:140px 0 72px;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);}
+.sobre-grid{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:start;}
+.sobre-kicker{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:12px;}
+.sobre-h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,5vw,56px);font-weight:400;color:var(--white);line-height:1.08;margin-bottom:8px;}
+.sobre-h1 em{font-style:italic;color:var(--gold);}
+.sobre-role{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
+.sobre-bio{display:flex;flex-direction:column;gap:16px;}
+.sobre-bio p{font-size:15px;color:var(--body);line-height:1.75;}
+.sobre-bio p strong{color:var(--white);}
+.sobre-card{background:var(--bg3);border:1px solid var(--border);padding:28px;position:sticky;top:90px;}
+.sobre-card-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--white);font-weight:400;margin-bottom:4px;}
+.sobre-card-role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;}
+.sobre-card-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--body);}
+.sobre-card-row:last-child{border-bottom:none;}
+.sobre-card-row svg{color:var(--gold2);flex-shrink:0;}
+.sobre-card-row a{color:var(--body);text-decoration:none;}
+.sobre-card-row a:hover{color:var(--gold);}
+.sobre-section{padding:72px 0;}
+.sobre-section-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,36px);color:var(--white);font-weight:400;margin-bottom:32px;}
+.sobre-section-title em{font-style:italic;color:var(--gold);}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:2px;background:var(--border);}
+.client-chip{background:var(--bg3);padding:20px 24px;display:flex;align-items:center;gap:12px;}
+.client-dot{width:6px;height:6px;background:var(--gold2);transform:rotate(45deg);flex-shrink:0;}
+.client-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:.08em;color:var(--white);}
+.client-desc{font-size:11px;color:var(--muted);}
+.timeline{display:flex;flex-direction:column;gap:0;}
+.tl-item{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--border);}
+.tl-item:last-child{border-bottom:none;}
+.tl-year{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--gold2);line-height:1;}
+.tl-text{font-size:14px;color:var(--body);line-height:1.65;padding-top:4px;}
+.tl-text strong{color:var(--white);}
+.review-block{background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold2);padding:28px 32px;margin:0;}
+.review-text{font-size:16px;font-style:italic;color:var(--body);line-height:1.7;margin-bottom:14px;}
+.review-author{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:48px;}
+.stat-box{background:var(--bg3);padding:28px 24px;text-align:center;}
+.stat-box-n{font-family:'Bebas Neue',sans-serif;font-size:48px;color:var(--gold);line-height:1;}
+.stat-box-l{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.5;}
+@media(max-width:860px){
+  .sobre-grid{grid-template-columns:1fr;}
+  .sobre-card{position:static;}
+  .stats-row{grid-template-columns:1fr;}
+}
+
+
+/* ── FOOTER ──────────────────────────────────────────────────────────── */
+.footer{background:var(--bg2);border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">CINE<span class="g">GRAPHYA</span></a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+      <a href="/filmagem-aerea-drone-bh">Drone</a>
+      <a href="/video-institucional-bh">Institucional</a>
+      <a href="/eventos-corporativos-bh">Eventos</a>
+      <a href="/blog">Blog</a>
+      <a href="/sobre" class="active">Sobre</a>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener" class="nav-cta">Solicitar proposta</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<section class="sobre-hero">
+  <div class="w">
+    <div class="sobre-grid">
+
+      <!-- Left: Bio -->
+      <div>
+        <span class="sobre-kicker">Videomaker em BH · Desde 2010</span>
+        <h1 class="sobre-h1">César <em>Thierry</em></h1>
+        <p class="sobre-role">Videomaker & Produtor Audiovisual · Fundador da Cinegraphya</p>
+
+        <div class="sobre-bio">
+          <p>
+            Comecei a filmar em 2010, cobrindo casamentos, formaturas e festas em Belo Horizonte. Fiz isso por sete anos, um fim de semana após o outro, com câmera na mão e vontade de aprender.
+          </p>
+          <p>
+            Em 2017 comecei uma mudança de rota. A partir do contato de um cliente do qual fiz a cobertura do casamento, passei a atender empresas. Ele era do setor comercial de uma marca de cosméticos, e me convidou para produzir vídeos para o YouTube da empresa. A partir de então, comecei a produzir vídeos institucionais, coberturas de eventos corporativos, feiras, congressos, entrevistas e conteúdos para redes sociais. Técnica e briefing foram e continuam se atualizando com o tempo.
+          </p>
+          <p>
+            Desde então, já trabalhei com <strong>Globo</strong>, <strong>Band</strong>, <strong>Sebrae</strong>, <strong>Santa Casa</strong>, <strong>Metrô BH</strong> e <strong>Madero</strong>, entre outros. A Cinegraphya é praticamente uma operação solo: estou presente em todas as etapas do seu projeto — eu atendo, filmo e edito. Sem intermediários, sem equipe de vendas, sem terceirizados, mas muitos parceiros — fotógrafo, locutores, atores — com quem conto quando o projeto pede mais do que uma câmera.
+          </p>
+          <p>
+            Uso câmeras Canon Mirrorless 4K, drone DJI certificado pela ANAC e gravação de áudio dedicada. O equipamento ajuda. Mas o que o cliente recebe de volta é atenção real ao que ele precisa, mais do que um vídeo bonito em sua vitrine virtual.
+          </p>
+        </div>
+
+        <!-- Depoimento -->
+        <blockquote class="review-block" style="margin-top:36px;">
+          <p class="review-text">"César é um dos profissionais mais humanos, qualificados e competentes que temos. O capricho e o profissionalismo dele são de outra categoria."</p>
+          <p class="review-author">— Mariana Alves · Produtora, Canal Empreender · Band / Sebrae</p>
+        </blockquote>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-box-n">15+</div>
+            <div class="stat-box-l">anos de experiência em produção audiovisual</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-n">40</div>
+            <div class="stat-box-l">avaliações 5 estrelas no Google</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-n">NF</div>
+            <div class="stat-box-l">Nota Fiscal em 100% das contratações</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Card -->
+      <aside class="sobre-card">
+        <div class="sobre-card-name">César Thierry</div>
+        <div class="sobre-card-role">Videomaker · BH</div>
+
+        <div class="sobre-card-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Savassi, Belo Horizonte / MG
+        </div>
+        <div class="sobre-card-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          <a href="https://api.whatsapp.com/send?phone=5531975059088" target="_blank" rel="noopener">(31) 9 7505-9088</a>
+        </div>
+        <div class="sobre-card-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:contato@cinegraphya.com.br">contato@cinegraphya.com.br</a>
+        </div>
+        <div class="sobre-card-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a href="https://www.instagram.com/cinegraphya" target="_blank" rel="noopener">@cinegraphya</a>
+        </div>
+        <div class="sobre-card-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <a href="https://www.cinegraphya.com.br">www.cinegraphya.com.br</a>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20sobre%20e%20gostaria%20de%20um%20or%C3%A7amento."
+           target="_blank" rel="noopener"
+           style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:20px;padding:11px;background:#25d366;color:#fff;border-radius:2px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">
+          💬 Falar no WhatsApp
+        </a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ── CLIENTES ──────────────────────────────────────────────────────────── -->
+<section class="sobre-section" style="background:var(--bg2)">
+  <div class="w">
+    <span class="sobre-kicker">Portfólio de clientes</span>
+    <h2 class="sobre-section-title">Marcas que já <em>confiaram</em> na Cinegraphya</h2>
+    <div class="clients-grid">
+      <div class="client-chip"><div class="client-dot"></div><div><div class="client-name">Globo</div><div class="client-desc">TV & Streaming</div></div></div>
+      <div class="client-chip"><div class="client-dot"></div><div><div class="client-name">Band</div><div class="client-desc">Canal Empreender</div></div></div>
+      <div class="client-chip"><div class="client-dot"></div><div><div class="client-name">Sebrae</div><div class="client-desc">Educação Empresarial</div></div></div>
+      <div class="client-chip"><div class="client-dot"></div><div><div class="client-name">Santa Casa</div><div class="client-desc">Saúde</div></div></div>
+      <div class="client-chip"><div class="client-dot"></div><div><div class="client-name">Metrô BH</div><div class="client-desc">Mobilidade Urbana</div></div></div>
+      <div class="client-chip"><div class="client-dot"></div><div><div class="client-name">Madero</div><div class="client-desc">Gastronomia</div></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ── TRAJETÓRIA ────────────────────────────────────────────────────────── -->
+<section class="sobre-section">
+  <div class="w" style="max-width:720px">
+    <span class="sobre-kicker">Trajetória</span>
+    <h2 class="sobre-section-title">15 anos de <em>câmera na mão</em></h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">2010</div>
+        <div class="tl-text"><strong>Câmera nas mãos, fim de semana a fim de semana.</strong> Início da carreira cobrindo eventos sociais — casamentos, formaturas, aniversários. Sete anos aprendendo a capturar o que não repete.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2014</div>
+        <div class="tl-text"><strong>Primeiras produções para veículos de comunicação.</strong> Trabalhos para emissoras e portais de notícias em BH, ganhando experiência com prazos curtos e exigência técnica maior.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <div class="tl-text"><strong>Virada para o mercado corporativo.</strong> Decisão de deixar os eventos sociais e focar exclusivamente em vídeos para empresas. Início dos primeiros projetos institucionais em Belo Horizonte.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2018</div>
+        <div class="tl-text"><strong>Canal Empreender — Band / Sebrae.</strong> Produção para o Canal Empreender da Band em parceria com o Sebrae. Primeiro trabalho de alcance nacional, com a produtora Mariana Alves.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2023</div>
+        <div class="tl-text"><strong>Abertura da Cinegraphya LTDA.</strong> Formalização da empresa com CNPJ ativo, emissão de Nota Fiscal e atendimento corporativo com contrato em todas as contratações.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-text"><strong>40 avaliações 5 estrelas no Google.</strong> Resultado acumulado de clientes reais ao longo de 15 anos — sem compra de reviews, sem campanhas de incentivo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ── FAQ AEO ───────────────────────────────────────────────────────────── -->
+<section class="sobre-section" style="background:var(--bg2)" aria-labelledby="faq-sobre-h2">
+  <div class="w" style="max-width:720px">
+    <span class="sobre-kicker">Perguntas frequentes</span>
+    <h2 class="sobre-section-title" id="faq-sobre-h2">Sobre o <em>César Thierry</em></h2>
+    <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--border);">
+      <details style="border-bottom:1px solid var(--border);">
+        <summary style="padding:18px 20px;cursor:pointer;font-size:14px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Quem é César Thierry?
+          <span style="color:var(--gold);font-size:18px;flex-shrink:0;">+</span>
+        </summary>
+        <div style="padding:0 20px 18px;font-size:13px;color:var(--body);line-height:1.7;">
+          César Thierry Freitas Nunes de Sousa é videomaker profissional em Belo Horizonte, MG, com mais de 15 anos de experiência em produção audiovisual. É fundador e sócio único da Cinegraphya LTDA (CNPJ 58.999.446/0001-51), empresa especializada em vídeos corporativos, institucionais e cobertura de eventos.
+        </div>
+      </details>
+      <details style="border-bottom:1px solid var(--border);">
+        <summary style="padding:18px 20px;cursor:pointer;font-size:14px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Para quais empresas o César já produziu vídeos?
+          <span style="color:var(--gold);font-size:18px;flex-shrink:0;">+</span>
+        </summary>
+        <div style="padding:0 20px 18px;font-size:13px;color:var(--body);line-height:1.7;">
+          César já produziu para Globo, Band (Canal Empreender), Sebrae, Santa Casa, Metrô BH, Madero e centenas de empresas de médio porte em Belo Horizonte e no Brasil. Possui 40 avaliações 5 estrelas no Google.
+        </div>
+      </details>
+      <details style="border-bottom:1px solid var(--border);">
+        <summary style="padding:18px 20px;cursor:pointer;font-size:14px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Qual é a experiência do César Thierry em videomaking?
+          <span style="color:var(--gold);font-size:18px;flex-shrink:0;">+</span>
+        </summary>
+        <div style="padding:0 20px 18px;font-size:13px;color:var(--body);line-height:1.7;">
+          Mais de 15 anos de experiência em produção audiovisual profissional, com especialização em vídeo corporativo, institucional, cobertura de eventos, filmagem com drone DJI 4K e conteúdo para redes sociais.
+        </div>
+      </details>
+      <details style="border-bottom:1px solid var(--border);">
+        <summary style="padding:18px 20px;cursor:pointer;font-size:14px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Como contratar o César Thierry para um projeto de vídeo em BH?
+          <span style="color:var(--gold);font-size:18px;flex-shrink:0;">+</span>
+        </summary>
+        <div style="padding:0 20px 18px;font-size:13px;color:var(--body);line-height:1.7;">
+          Entre em contato pelo WhatsApp (31) 9 7505-9088 ou pelo e-mail contato@cinegraphya.com.br. A Cinegraphya responde em até 24 horas e oferece orçamento personalizado sem compromisso.
+        </div>
+      </details>
+      <details>
+        <summary style="padding:18px 20px;cursor:pointer;font-size:14px;color:var(--white);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          A Cinegraphya emite Nota Fiscal?
+          <span style="color:var(--gold);font-size:18px;flex-shrink:0;">+</span>
+        </summary>
+        <div style="padding:0 20px 18px;font-size:13px;color:var(--body);line-height:1.7;">
+          Sim. A Cinegraphya LTDA (CNPJ 58.999.446/0001-51) emite Nota Fiscal para 100% dos serviços contratados. Atendimento corporativo completo com documentação fiscal e pagamento em até 30 dias após entrega.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ── CTA FINAL ─────────────────────────────────────────────────────────── -->
+<section class="sobre-section" style="text-align:center">
+  <div class="w" style="max-width:560px">
+    <span class="sobre-kicker">Vamos trabalhar juntos</span>
+    <h2 class="sobre-section-title">Seu projeto começa <em>aqui.</em></h2>
+    <p style="margin-bottom:32px;font-size:14px;color:var(--muted);">Orçamento em até 24h. Nota Fiscal garantida. 15 anos de experiência.</p>
+    <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20sobre%20e%20gostaria%20de%20um%20or%C3%A7amento."
+       target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:#25d366;color:#fff;border-radius:2px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">
+      💬 Falar no WhatsApp
+    </a>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted);">
+      contato@cinegraphya.com.br · cinegraphya.com.br
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="w">
+    <p>Cinegraphya LTDA · CNPJ 58.999.446/0001-51 · Savassi, Belo Horizonte / MG · Videomaker em BH desde 2010</p>
+  </div>
+</footer>
+
+</body>
+</html>
