@@ -860,8 +860,6 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
      Dispara após 10 segundos OU 40% de scroll
 ═══════════════════════════════════════════════════════════════ -->
 
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <style>
 /* ── Overlay ── */
@@ -1045,26 +1043,6 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
 }
 .cg-btn-wa:hover { background: #1da851; }
 
-.cg-btn-send {
-  display: block;
-  width: 100%;
-  background: none;
-  border: 1px solid rgba(201,150,122,.35);
-  color: #c9967a;
-  border-radius: 3px;
-  padding: .7rem;
-  font-family: 'Jost', sans-serif;
-  font-size: .75rem;
-  font-weight: 400;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all .2s;
-}
-.cg-btn-send:hover {
-  background: rgba(201,150,122,.1);
-  border-color: rgba(201,150,122,.6);
-}
 
 /* ── Success state ── */
 #cg-popup-success {
@@ -1165,21 +1143,14 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
 
       <div class="cg-divider"></div>
 
-      <!-- Q3: falar agora -->
-      <p class="cg-cta-text">Prefere falar diretamente agora?</p>
-
       <a id="cg-btn-wa"
-        href="https://api.whatsapp.com/send?phone=5531975059088&text=Olá!%20Vim%20pelo%20site%20da%20Cinegraphya%20e%20gostaria%20de%20um%20orçamento."
-        target="_blank" rel="noopener" class="cg-btn-wa">
-        💬 &nbsp;Falar pelo WhatsApp agora
+        href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Cinegraphya%20e%20gostaria%20de%20um%20or%C3%A7amento."
+        target="_blank" rel="noopener" class="cg-btn-wa" id="cg-btn-wa">
+        💬 &nbsp;Enviar minhas respostas no WhatsApp
       </a>
 
-      <button class="cg-btn-send" id="cg-btn-send">
-        Enviar minhas respostas →
-      </button>
-
       <p class="cg-popup-footer">
-        Suas informações são usadas apenas para entrar em contato sobre sua solicitação.
+        Suas seleções serão enviadas como mensagem no WhatsApp.
       </p>
     </div>
 
@@ -1203,33 +1174,21 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
 
 <script>
 (function() {
-  /* ── Config ──────────────────────────────────────────────────────────
-     INSTRUÇÕES DE CONFIGURAÇÃO:
-     1. Crie conta gratuita em https://www.emailjs.com
-     2. Crie um Email Service (Gmail com contato@cinegraphya.com.br)
-     3. Crie um Email Template com as variáveis:
-        {{tipos_video}}, {{whatsapp}}, {{data_hora}}, {{pagina}}
-     4. Substitua os valores abaixo pelos seus IDs reais
-  ──────────────────────────────────────────────────────────────────── */
-  var EMAILJS_PUBLIC_KEY  = 'SEU_PUBLIC_KEY_AQUI';
-  var EMAILJS_SERVICE_ID  = 'SEU_SERVICE_ID_AQUI';
-  var EMAILJS_TEMPLATE_ID = 'SEU_TEMPLATE_ID_AQUI';
-  var TO_EMAIL            = 'contato@cinegraphya.com.br';
-
   var overlay  = document.getElementById('cg-popup-overlay');
   var closeBtn = document.getElementById('cg-popup-close');
-  var sendBtn  = document.getElementById('cg-btn-send');
+  var waBtn    = document.getElementById('cg-btn-wa');
   var shown    = false;
 
-  /* Inicializar EmailJS */
-  if (typeof emailjs !== 'undefined') {
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-  }
+  /* ── Não mostrar se já foi mostrado nesta sessão ── */
+  try {
+    if (sessionStorage.getItem('cg_popup_shown')) {
+      shown = true;
+    }
+  } catch(e) {}
 
   /* ── Trigger: 10s OU 40% de scroll ── */
   function showPopup() {
     if (shown) return;
-    /* Não mostrar para visitas diretas por URL com hash */
     if (window.location.hash) return;
     shown = true;
     overlay.classList.add('active');
@@ -1251,17 +1210,8 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
   function closePopup() {
     overlay.classList.remove('active');
     document.body.style.overflow = '';
-    /* Marcar no sessionStorage para não mostrar novamente nessa visita */
     try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
   }
-
-  /* Não mostrar duas vezes na mesma sessão */
-  try {
-    if (sessionStorage.getItem('cg_popup_shown')) {
-      shown = true;
-      clearTimeout(timer);
-    }
-  } catch(e) {}
 
   closeBtn.addEventListener('click', closePopup);
   overlay.addEventListener('click', function(e) {
@@ -1276,59 +1226,45 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
     var boxes = document.querySelectorAll('#cg-checks input[type="checkbox"]:checked');
     var vals = [];
     boxes.forEach(function(b) { vals.push(b.value); });
-    return vals.length ? vals.join(', ') : 'Nenhuma opção selecionada';
+    return vals;
   }
 
-  /* ── Enviar ── */
-  sendBtn.addEventListener('click', function() {
-    var tipos = getChecked();
-    var whatsapp = document.getElementById('cg-whatsapp').value.trim() || 'Não informado';
-    var now = new Date().toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'});
+  /* ── Atualizar link do WhatsApp em tempo real ── */
+  function updateWALink() {
+    var tipos   = getChecked();
+    var waNum   = document.getElementById('cg-whatsapp').value.trim();
 
-    sendBtn.textContent = 'Enviando...';
-    sendBtn.disabled = true;
+    var msg = 'Olá! Vim pelo site da Cinegraphya.';
 
-    var templateParams = {
-      to_email:    TO_EMAIL,
-      tipos_video: tipos,
-      whatsapp:    whatsapp,
-      data_hora:   now,
-      pagina:      window.location.href,
-      reply_to:    TO_EMAIL,
-    };
+    if (tipos.length > 0) {
+      msg += '%0A%0AServiços de interesse:%0A';
+      tipos.forEach(function(t) { msg += '• ' + t + '%0A'; });
+    }
 
-    /* Atualiza link do WhatsApp com tipo selecionado na mensagem */
-    var msgWa = encodeURIComponent(
-      'Olá! Vim pelo site da Cinegraphya. Tenho interesse em: ' + tipos
+    if (waNum) {
+      msg += '%0AMeu WhatsApp: ' + waNum;
+    }
+
+    msg += '%0A%0AGostaria de receber um orçamento.';
+
+    waBtn.href = 'https://api.whatsapp.com/send?phone=5531975059088&text=' + encodeURIComponent(
+      'Olá! Vim pelo site da Cinegraphya.' +
+      (tipos.length > 0 ? '\n\nServiços de interesse:\n' + tipos.map(function(t){ return '• ' + t; }).join('\n') : '') +
+      (waNum ? '\n\nMeu WhatsApp: ' + waNum : '') +
+      '\n\nGostaria de receber um orçamento.'
     );
-    document.getElementById('cg-btn-wa').href =
-      'https://api.whatsapp.com/send?phone=5531975059088&text=' + msgWa;
+  }
 
-    function onSuccess() {
-      document.getElementById('cg-popup-form').style.display = 'none';
-      document.getElementById('cg-popup-success').style.display = 'block';
-      try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
-    }
+  /* Atualizar link sempre que algo mudar */
+  document.querySelectorAll('#cg-checks input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', updateWALink);
+  });
+  document.getElementById('cg-whatsapp').addEventListener('input', updateWALink);
 
-    function onError() {
-      /* Fallback: abre mailto se EmailJS falhar */
-      var body = 'Tipo de vídeo: ' + tipos +
-                 '%0AWhatsApp: ' + whatsapp +
-                 '%0AData: ' + now +
-                 '%0APágina: ' + window.location.href;
-      window.open('mailto:' + TO_EMAIL +
-        '?subject=Novo%20Lead%20-%20Site%20Cinegraphya&body=' + body, '_blank');
-      onSuccess();
-    }
-
-    if (typeof emailjs !== 'undefined' &&
-        EMAILJS_PUBLIC_KEY !== 'SEU_PUBLIC_KEY_AQUI') {
-      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-        .then(onSuccess, onError);
-    } else {
-      /* EmailJS não configurado ainda — usar mailto como fallback */
-      onError();
-    }
+  /* Fechar popup ao clicar no botão WA */
+  waBtn.addEventListener('click', function() {
+    try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
+    setTimeout(closePopup, 500);
   });
 
 })();
