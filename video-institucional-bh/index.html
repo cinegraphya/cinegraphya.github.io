@@ -60,15 +60,29 @@
   "provider": {
     "@type": "LocalBusiness",
     "name": "Cinegraphya",
-    "url": "https://www.cinegraphya.com.br"
+    "url": "https://www.cinegraphya.com.br",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "40",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   },
   "areaServed": {
     "@type": "Place",
     "name": "Belo Horizonte, MG, Brasil"
   },
-  "url": "https://www.cinegraphya.com.br/video-institucional-bh"
+  "url": "https://www.cinegraphya.com.br/video-institucional-bh",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "40",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
-  </script>
+</script>
   <!-- ═══ /SEO ══════════════════════════════════════════════════════════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -564,6 +578,54 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   .footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto custa um vídeo institucional em BH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A edição de um vídeo institucional de até 5 minutos custa a partir de R$ 800 na Cinegraphya. O valor total do projeto — incluindo captação e edição — varia conforme o escopo. Solicite um orçamento personalizado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo leva para produzir um vídeo institucional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O prazo de entrega da edição finalizada é de até 15 dias úteis após a captação. O cliente tem 5 dias úteis para solicitar ajustes e 2 rodadas de revisão sem custo adicional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que está incluído na produção de um vídeo institucional da Cinegraphya?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A produção inclui briefing estratégico, roteiro, captação em 4K com áudio dedicado, edição profissional com color grading, trilha sonora, legendas e vinheta. A entrega é feita via Google Drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Cinegraphya já produziu vídeos institucionais para grandes empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A Cinegraphya tem mais de 15 anos de experiência e portfólio que inclui produções para Globo, Band, Sebrae, Santa Casa e Metrô BH, entre outros clientes corporativos em Belo Horizonte e no Brasil."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vídeo institucional serve para quais tipos de empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O vídeo institucional é indicado para empresas de qualquer porte e setor que desejam comunicar sua história, valores e serviços de forma profissional — seja para site, redes sociais, apresentações comerciais ou eventos."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -615,10 +677,11 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <span class="sec-tag reveal">Perguntas frequentes</span>
   <h2 class="sec-title reveal" id="faq-h2">Dúvidas sobre este serviço</h2>
   <div class="sec-line reveal"></div>
-  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa um vídeo institucional em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A referência é: Pack Captação (4h) + Pack Edição Institucional = R$ 1.650. O valor varia conforme a duração e o escopo. Solicite um orçamento personalizado.</div></div></div>
-<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Em quanto tempo fica pronto o vídeo?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O vídeo editado é entregue em até 5 dias úteis após a gravação. O material bruto fica disponível em até 24h.</div></div></div>
-<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Vocês fazem a locação do espaço?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Gravamos preferencialmente no seu espaço, que melhor representa sua marca. Para locação, podemos indicar opções.</div></div></div>
-<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">O vídeo institucional serve para ADS?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Produzimos uma versão adaptada para tráfego pago a partir do mesmo material gravado.</div></div></div>
+  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa um vídeo institucional em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A edição de um vídeo institucional de até 5 minutos custa a partir de R$ 800 na Cinegraphya. O valor total do projeto — incluindo captação e edição — varia conforme o escopo. Solicite um orçamento personalizado.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto tempo leva para produzir um vídeo institucional?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O prazo de entrega da edição finalizada é de até 15 dias úteis após a captação. O cliente tem 5 dias úteis para solicitar ajustes e 2 rodadas de revisão sem custo adicional.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">O que está incluído na produção de um vídeo institucional da Cinegraphya?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A produção inclui briefing estratégico, roteiro, captação em 4K com áudio dedicado, edição profissional com color grading, trilha sonora, legendas e vinheta. A entrega é feita via Google Drive.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">A Cinegraphya já produziu vídeos institucionais para grandes empresas?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. A Cinegraphya tem mais de 15 anos de experiência e portfólio que inclui produções para Globo, Band, Sebrae, Santa Casa e Metrô BH, entre outros clientes corporativos em Belo Horizonte e no Brasil.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Vídeo institucional serve para quais tipos de empresa?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O vídeo institucional é indicado para empresas de qualquer porte e setor que desejam comunicar sua história, valores e serviços de forma profissional — seja para site, redes sociais, apresentações comerciais ou eventos.</div></div></div>
 </div>
 </div>
 </section>
