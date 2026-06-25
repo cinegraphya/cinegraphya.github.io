@@ -60,15 +60,29 @@
   "provider": {
     "@type": "LocalBusiness",
     "name": "Cinegraphya",
-    "url": "https://www.cinegraphya.com.br"
+    "url": "https://www.cinegraphya.com.br",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "40",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   },
   "areaServed": {
     "@type": "Place",
     "name": "Belo Horizonte, MG, Brasil"
   },
-  "url": "https://www.cinegraphya.com.br/filmagem-palestra-bh"
+  "url": "https://www.cinegraphya.com.br/filmagem-palestra-bh",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "40",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
-  </script>
+</script>
   <!-- ═══ /SEO ══════════════════════════════════════════════════════════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -564,6 +578,54 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   .footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto custa gravar uma palestra em BH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gravação de palestras e workshops começa em R$ 400 por hora de captação na Cinegraphya. O valor total depende da duração e se inclui edição. Solicite um orçamento personalizado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que está incluído na gravação de uma palestra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gravação inclui câmera 4K em posição fixa ou dinâmica, microfone lapela sem fio para o palestrante, gravador de áudio dedicado e, quando necessário, captura da tela de apresentação. O material bruto é entregue via Google Drive em até 24 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Cinegraphya edita o vídeo da palestra após a gravação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Oferecemos edição do vídeo para publicação no YouTube, LinkedIn ou plataformas de EAD. A edição inclui corte de pausas, inserção de slides, legendas e trilha de abertura e encerramento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Cinegraphya grava eventos com múltiplos palestrantes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Atendemos eventos com múltiplos palestrantes, mesas-redondas, painéis e conferências. Para eventos maiores, podemos disponibilizar mais de uma câmera para uma cobertura completa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Uma gravação de palestra pode virar conteúdo para redes sociais?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim — e é altamente recomendado. A Cinegraphya oferece o serviço de transformar o conteúdo da palestra em múltiplos cortes para Instagram, LinkedIn e YouTube Shorts, aumentando o alcance do material produzido."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -615,10 +677,11 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <span class="sec-tag reveal">Perguntas frequentes</span>
   <h2 class="sec-title reveal" id="faq-h2">Dúvidas sobre este serviço</h2>
   <div class="sec-line reveal"></div>
-  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa a filmagem de uma palestra em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Um dia de 8h de captação sai a partir de R$ 1.500. A edição por vídeo começa em R$ 150 (redes) ou R$ 700 (vídeo longo). Solicite um orçamento.</div></div></div>
-<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Posso usar os vídeos em uma plataforma de EAD?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Entregamos os arquivos em alta resolução, prontos para upload em qualquer plataforma de ensino online.</div></div></div>
-<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Vocês gravam em estúdio ou no espaço do cliente?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Gravamos no espaço do cliente ou em locação conforme a necessidade do projeto.</div></div></div>
-<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">É possível gravar com múltiplos palestrantes?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Configuramos o setup para acomodar apresentações individuais, painéis e mesas-redondas.</div></div></div>
+  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa gravar uma palestra em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A gravação de palestras e workshops começa em R$ 400 por hora de captação na Cinegraphya. O valor total depende da duração e se inclui edição. Solicite um orçamento personalizado.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">O que está incluído na gravação de uma palestra?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A gravação inclui câmera 4K em posição fixa ou dinâmica, microfone lapela sem fio para o palestrante, gravador de áudio dedicado e, quando necessário, captura da tela de apresentação. O material bruto é entregue via Google Drive em até 24 horas.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">A Cinegraphya edita o vídeo da palestra após a gravação?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Oferecemos edição do vídeo para publicação no YouTube, LinkedIn ou plataformas de EAD. A edição inclui corte de pausas, inserção de slides, legendas e trilha de abertura e encerramento.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">A Cinegraphya grava eventos com múltiplos palestrantes?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Atendemos eventos com múltiplos palestrantes, mesas-redondas, painéis e conferências. Para eventos maiores, podemos disponibilizar mais de uma câmera para uma cobertura completa.</div></div></div>
+<div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Uma gravação de palestra pode virar conteúdo para redes sociais?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim — e é altamente recomendado. A Cinegraphya oferece o serviço de transformar o conteúdo da palestra em múltiplos cortes para Instagram, LinkedIn e YouTube Shorts, aumentando o alcance do material produzido.</div></div></div>
 </div>
 </div>
 </section>
