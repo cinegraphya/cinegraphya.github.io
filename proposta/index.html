@@ -814,6 +814,16 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
         <button class="calc-opt"        data-group="cap" data-val="950"  onclick="selOpt(this,'cap')">4 horas<span class="calc-opt-price">R$ 950</span></button>
         <button class="calc-opt"        data-group="cap" data-val="1500" onclick="selOpt(this,'cap')">8 horas — diária<span class="calc-opt-price">R$ 1.500</span></button>
       </div>
+      <!-- Contador de diárias — aparece só quando diária selecionada -->
+      <div id="diarias-row" style="display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+        <p class="calc-block-tag" style="margin-bottom:10px">Quantas diárias?</p>
+        <div class="calc-qty-row">
+          <button class="calc-qty-btn" onclick="chgDiarias(-1)" aria-label="Diminuir">&#8722;</button>
+          <div class="calc-qty-display"><span id="diarias-num">1</span><span class="calc-qty-label">diária(s)</span></div>
+          <button class="calc-qty-btn" onclick="chgDiarias(1)"  aria-label="Aumentar">&#43;</button>
+          <div class="calc-qty-unit" id="diarias-unit-price"><strong>R$ 1.500</strong>/diária</div>
+        </div>
+      </div>
     </div>
     <div class="calc-divider"></div>
 
@@ -964,15 +974,33 @@ document.querySelectorAll('a[href]').forEach(function(l){
   }
 });
 
-var cState={cap:0,tipo:'none',qty:1};
+var cState={cap:0,tipo:'none',qty:1,diarias:1};
 var REDES=[0,150,145,140,135,130,125,120,115,110];
 function rdPrc(q){return q<=0?0:q<=9?REDES[q]:100;}
 function selOpt(el,g){
   document.querySelectorAll('[data-group="'+g+'"]').forEach(function(b){b.classList.remove('active');});
   el.classList.add('active');
-  if(g==='cap') cState.cap=parseInt(el.getAttribute('data-val'))||0;
+  if(g==='cap'){
+    cState.cap=parseInt(el.getAttribute('data-val'))||0;
+    var isDiaria = cState.cap===1500;
+    var dRow=document.getElementById('diarias-row');
+    if(dRow) dRow.style.display=isDiaria?'block':'none';
+    if(!isDiaria) cState.diarias=1;
+    else updDiarias();
+  }
   else if(g==='tipo'){cState.tipo=el.getAttribute('data-val');updQty();}
   calcT();
+}
+function chgDiarias(d){
+  cState.diarias=Math.max(1,cState.diarias+d);
+  updDiarias();
+  calcT();
+}
+function updDiarias(){
+  var n=document.getElementById('diarias-num');
+  if(n) n.textContent=cState.diarias;
+  var u=document.getElementById('diarias-unit-price');
+  if(u) u.innerHTML='Total captação: <strong>'+fmt(1500*cState.diarias)+'</strong>';
 }
 function chgQty(d){cState.qty=Math.max(1,Math.min(50,cState.qty+d));document.getElementById('qty-num').textContent=cState.qty;calcT();}
 function updQty(){var dt=document.getElementById('discount-table');dt.style.display=cState.tipo==='redes'?'block':'none';if(cState.tipo==='redes')bldTbl();}
@@ -984,13 +1012,13 @@ function bldTbl(){
 }
 function fmt(v){return 'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:0});}
 function calcT(){
-  var cap=cState.cap,qty=cState.qty,tipo=cState.tipo,unit=0,edi=0;
+  var capBase=cState.cap,diarias=cState.diarias,cap=capBase===1500?1500*diarias:capBase,qty=cState.qty,tipo=cState.tipo,unit=0,edi=0;
   if(tipo==='redes'){unit=rdPrc(qty);edi=unit*qty;bldTbl();document.getElementById('qty-unit-price').innerHTML='<strong>'+fmt(unit)+'</strong>/unidade';}
   else if(tipo==='institucional'){unit=700;edi=700*qty;document.getElementById('qty-unit-price').innerHTML='<strong>R$ 700</strong>/unidade';}
   else{document.getElementById('qty-unit-price').innerHTML='';}
   var total=cap+edi;
   var bd=document.getElementById('result-bd'),rows='';
-  if(cap>0){var lbl={400:'Captação 1h',700:'Captação 2h',950:'Captação 4h',1500:'Captação 8h'}[cap]||'Captação';rows+='<div class="calc-bd-row"><span>'+lbl+'</span><span class="calc-bd-val">'+fmt(cap)+'</span></div>';}
+  if(cap>0){var lbl=capBase===400?'Captação 1h':capBase===700?'Captação 2h':capBase===950?'Captação 4h':capBase===1500?(diarias===1?'Captação 8h — 1 diária':'Captação 8h — '+diarias+' diárias'):'Captação';rows+='<div class="calc-bd-row"><span>'+lbl+'</span><span class="calc-bd-val">'+fmt(cap)+'</span></div>';}
   if(edi>0){var tn=tipo==='redes'?'Redes sociais':'Institucional';rows+='<div class="calc-bd-row"><span>'+qty+'x '+tn+' ('+fmt(unit)+'/un.)</span><span class="calc-bd-val">'+fmt(edi)+'</span></div>';if(tipo==='redes'&&qty>=2){var eco=(150-unit)*qty;if(eco>0)rows+='<div class="calc-bd-row highlight"><span>&#10022; Desconto por volume</span><span class="calc-bd-val">&#8722;'+fmt(eco)+'</span></div>';}}
   bd.innerHTML=rows||'<div class="calc-bd-row"><span style="color:var(--muted);font-style:italic;font-family:Crimson Pro,serif">Selecione as opções acima</span></div>';
   document.getElementById('result-total').textContent=fmt(total);
