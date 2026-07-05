@@ -423,8 +423,7 @@ summary:hover{background:rgba(240,222,213,.35)}
     <h2 class="titulo rv">Serviços <em>avulsos</em></h2>
     <p class="sub rv">Adicione ao seu pacote ou contrate de forma independente.</p>
     <div class="av-g rv">
-      <div class="av"><div class="av-i">🌿</div><div class="av-n">Ensaio Externo / Love Story</div><div class="av-d">Sessão pré-casamento em locação. 2 horas com equipamento profissional. Ideal para Love Story e ensaios temáticos.</div><div class="av-p">R$ 1.500</div></div>
-      <div class="av"><div class="av-i">🎬</div><div class="av-n">Save the Date</div><div class="av-d">Vídeo para convidar com charme e elegância. 2 horas de produção.</div><div class="av-p">R$ 1.400</div></div>
+      <div class="av"><div class="av-i">🌿</div><div class="av-n">Ensaio Externo / Love Story</div><div class="av-d">Sessão pré-casamento em locação. 2 horas com equipamento profissional. Ideal para Love Story e ensaios temáticos.</div><div class="av-p">R$ 1.000</div></div>
       <div class="av"><div class="av-i">🎞</div><div class="av-n">Making of</div><div class="av-d">Cobertura da preparação dos noivos. 2 horas com equipe dedicada.</div><div class="av-p">R$ 500</div></div>
       <div class="av"><div class="av-i">🚁</div><div class="av-n">Drone</div><div class="av-d">Imagens aéreas em 4K. DJI certificado pela ANAC.</div><div class="av-p">R$ 700</div></div>
       <div class="av"><div class="av-i">⏱</div><div class="av-n">Hora adicional</div><div class="av-d">Hora adicional de cobertura na recepção. Sujeito à disponibilidade.</div><div class="av-p">R$ 200/h</div></div>
@@ -438,7 +437,7 @@ summary:hover{background:rgba(240,222,213,.35)}
 <section class="sc" style="padding:32px 0">
   <div class="w" style="text-align:center">
     <p style="font-size:13px;color:var(--mid);font-weight:300;line-height:1.8">
-      Produzimos <strong style="color:var(--texto);font-weight:400">Short Film</strong>, <strong style="color:var(--texto);font-weight:400">Wedding Trailer</strong>, <strong style="color:var(--texto);font-weight:400">Love Story</strong> e <strong style="color:var(--texto);font-weight:400">Save the Date</strong> em Belo Horizonte.<br>
+      Produzimos <strong style="color:var(--texto);font-weight:400">Short Film</strong>, <strong style="color:var(--texto);font-weight:400">Wedding Trailer</strong> e <strong style="color:var(--texto);font-weight:400">Love Story</strong> em Belo Horizonte.<br>
       Cobertura completa do casamento em 4K — da preparação à festa.
     </p>
   </div>
@@ -502,11 +501,7 @@ summary:hover{background:rgba(240,222,213,.35)}
         </div>
         <div class="calc-row">
           <div class="calc-el"><div class="calc-en">Ensaio Externo</div><div class="calc-ed">2 horas · Sessão pré-casamento em locação</div></div>
-          <div class="calc-er"><div class="calc-ep">R$ 1.500</div><div class="tog" id="tog-ens"></div></div>
-        </div>
-        <div class="calc-row">
-          <div class="calc-el"><div class="calc-en">Save the Date</div><div class="calc-ed">2 horas · Vídeo de convite</div></div>
-          <div class="calc-er"><div class="calc-ep">R$ 1.400</div><div class="tog" id="tog-std"></div></div>
+          <div class="calc-er"><div class="calc-ep">R$ 1.000</div><div class="tog" id="tog-ens"></div></div>
         </div>
         <div class="calc-row">
           <div class="calc-el"><div class="calc-en">Making of</div><div class="calc-ed">2 horas · Preparação dos noivos · Requer cerimônia</div></div>
@@ -563,7 +558,6 @@ var estado = {
   rec: 0,
   recL: '',
   ens: false,
-  std: false,
   mof: false,
   dro: false,
   h: 0
@@ -609,8 +603,7 @@ function atualizar() {
   var total = 0;
   if (estado.cer) { linhas.push(['Cerim\u00f4nia (2h)', 2500]); total += 2500; }
   if (estado.rec > 0) { linhas.push(['Recep\u00e7\u00e3o \u2014 ' + estado.recL, estado.rec]); total += estado.rec; }
-  if (estado.ens) { linhas.push(['Ensaio Externo (2h)', 1500]); total += 1500; }
-  if (estado.std) { linhas.push(['Save the Date (2h)', 1400]); total += 1400; }
+  if (estado.ens) { linhas.push(['Ensaio Externo (2h)', 1000]); total += 1000; }
   if (estado.mof) { linhas.push(['Making of (2h)', 500]); total += 500; }
   if (estado.dro) { linhas.push(['Drone DJI 4K', 700]); total += 700; }
   if (estado.h > 0) { linhas.push([estado.h + 'h adicional de recep\u00e7\u00e3o', estado.h * 200]); total += estado.h * 200; }
@@ -668,16 +661,6 @@ document.addEventListener('DOMContentLoaded', function() {
     togEns.addEventListener('click', function() {
       estado.ens = !estado.ens;
       if (estado.ens) { togEns.classList.add('on'); } else { togEns.classList.remove('on'); }
-      atualizar();
-    });
-  }
-
-  /* Save the Date — livre */
-  var togStd = document.getElementById('tog-std');
-  if (togStd) {
-    togStd.addEventListener('click', function() {
-      estado.std = !estado.std;
-      if (estado.std) { togStd.classList.add('on'); } else { togStd.classList.remove('on'); }
       atualizar();
     });
   }
