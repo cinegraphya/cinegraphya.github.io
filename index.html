@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#F9F6F2">
   <!-- Schema.org -->
   <script type="application/ld+json">
 {
@@ -93,10 +93,10 @@
 /* ── Reset ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0B0B0B;--bg2:#111111;--bg3:#181818;--bg4:#1E1E1E;
-  --gold:#C49E4E;--gold2:#9A7B35;--gold3:#F0C96A;
-  --white:#EDE8DE;--muted:#706A5F;--body:#B8B0A0;
-  --border:#2A2A2A;--border2:#3A3020;
+  --bg:#F9F6F2;--bg2:#F2EDE6;--bg3:#EDE6DB;--bg4:#E6DDD0;
+  --gold:#8B6B3D;--gold2:#6B4F28;--gold3:#A07840;
+  --white:#2A2218;--muted:#8A7E6F;--body:#4A4035;
+  --border:#D8D0C4;--border2:#C8BC9E;
   --fs-xs:11px;--fs-sm:13px;--fs-base:15px;--fs-md:17px;--fs-lg:20px;
   --sp-xs:8px;--sp-sm:16px;--sp-md:24px;--sp-lg:40px;--sp-xl:64px;
 }
@@ -135,7 +135,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   font-size:var(--fs-xs);font-weight:600;letter-spacing:.08em;
   text-transform:uppercase;transition:all .2s;white-space:nowrap;
   -webkit-tap-highlight-color:transparent}
-.btn-gold{background:var(--gold);color:#0B0B0B;border:1px solid var(--gold)}
+.btn-gold{background:var(--gold);color:#F9F6F2;border:1px solid var(--gold)}
 .btn-gold:hover,.btn-gold:active{background:var(--gold3);border-color:var(--gold3)}
 .btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold2)}
 .btn-outline:hover,.btn-outline:active{background:rgba(196,158,78,.1);border-color:var(--gold)}
@@ -151,7 +151,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
    NAV — hamburger mobile
 ════════════════════════════════════════════════════════ */
 .nav{position:sticky;top:0;z-index:200;
-  background:rgba(11,11,11,.95);backdrop-filter:blur(12px);
+  background:rgba(249,246,242,.96);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border)}
 .nav-inner{display:flex;align-items:center;
   justify-content:space-between;padding:12px var(--sp-sm)}
@@ -869,7 +869,7 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(10,8,6,.72);
+  background: rgba(42,34,24,.55);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 99999;
