@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial — IV MILES Summit | Cinegraphya</title>
+<meta name="description" content="Proposta de cobertura audiovisual da Cinegraphya para o IV MILES Summit, promovido pelo Instituto MILES em Belo Horizonte.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+/* ══════════════════════════════════════════════════════════════════════
+   PROPOSTA IV MILES SUMMIT — Cinegraphya
+   Paleta própria: navy institucional + teal saúde/inovação + coral CTA
+   Nota: identidade inspirada no segmento de saúde/inovação do Instituto
+   MILES — não foi possível extrair cores exatas do site (SPA protegido).
+═══════════════════════════════════════════════════════════════════════ */
+:root{
+  --navy:#0F2A43; --navy2:#173A5C; --navy3:#0A1E30;
+  --teal:#12A594; --teal2:#0D8A7C; --tealSoft:#E3F5F2;
+  --coral:#FF6B4A; --coral2:#E5502F;
+  --bg:#F7F9FB; --bg2:#EFF3F6; --bg3:#E4EAF0;
+  --white:#FFFFFF; --ink:#0F2A43; --body:#3D4B58; --muted:#7C8894;
+  --border:#DCE3E9;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font-family:'Inter',sans-serif;font-size:15.5px;line-height:1.7;color:var(--body);background:var(--bg)}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 24px}
+.wsm{max-width:760px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:var(--ink)}
+.hr{border:none;border-top:1px solid var(--border)}
+.sec{padding:76px 0}
+
+/* ── TOPO ─────────────────────────────────────────────────────────── */
+.topbar{background:var(--navy);padding:14px 0}
+.topbar-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.topbar-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.1em;color:#fff}
+.topbar-logo span{color:var(--teal)}
+.topbar-badge{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+
+/* ── HERO ─────────────────────────────────────────────────────────── */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 55%,var(--teal2) 150%);padding:64px 0 56px;color:#fff;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:-30%;right:-10%;width:520px;height:520px;background:radial-gradient(circle,rgba(18,165,148,.25) 0%,transparent 70%);pointer-events:none}
+.hero-kicker{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);background:rgba(18,165,148,.15);border:1px solid rgba(18,165,148,.35);padding:6px 14px;border-radius:20px;margin-bottom:20px}
+.hero h1{font-size:clamp(30px,4.6vw,46px);font-weight:600;line-height:1.18;color:#fff;margin-bottom:14px;max-width:680px}
+.hero h1 strong{color:var(--teal);font-weight:700}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.75);max-width:600px;margin-bottom:32px}
+.hero-dates{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);border-radius:10px;overflow:hidden;max-width:760px}
+.hero-date{background:rgba(255,255,255,.06);padding:18px 20px}
+.hero-date-tag{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.hero-date-d{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fff;line-height:1}
+.hero-date-t{font-size:12.5px;color:rgba(255,255,255,.65);margin-top:4px}
+
+/* ── BOTÕES ───────────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:8px;font-family:'Inter',sans-serif;font-weight:600;font-size:14px;cursor:pointer;transition:all .2s;border:none}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:var(--coral2)}
+.btn-outline-light{background:transparent;border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy2)}
+.btn-outline{background:none;border:1.5px solid var(--border);color:var(--navy)}
+.btn-outline:hover{border-color:var(--navy)}
+
+/* ── SAUDAÇÃO ─────────────────────────────────────────────────────── */
+.greeting{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:8px;padding:26px 30px;margin-top:-32px;position:relative;z-index:2;box-shadow:0 8px 30px rgba(15,42,67,.08)}
+.greeting p{font-size:14.5px;color:var(--body);line-height:1.75}
+.greeting p+p{margin-top:10px}
+.greeting strong{color:var(--navy)}
+
+/* ── TAGS E TÍTULOS DE SEÇÃO ──────────────────────────────────────── */
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal2);margin-bottom:10px}
+.sec-h2{font-size:clamp(24px,3.4vw,34px);font-weight:600;line-height:1.2;margin-bottom:14px}
+.sec-h2 em{font-style:normal;color:var(--teal2)}
+.sec-p{font-size:15px;color:var(--body);max-width:640px;margin-bottom:36px}
+
+/* ── SOBRE ────────────────────────────────────────────────────────── */
+.sobre-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.sobre-grid p{margin-bottom:14px;font-size:15px}
+.sobre-grid strong{color:var(--navy)}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border-radius:10px;overflow:hidden;margin-top:28px}
+.stat{background:var(--white);padding:20px}
+.stat-n{font-family:'Space Grotesk',sans-serif;font-size:30px;font-weight:700;color:var(--teal2);line-height:1}
+.stat-l{font-size:12px;color:var(--muted);margin-top:4px}
+.clients-card{background:var(--navy);border-radius:12px;padding:28px}
+.clients-card h3{color:#fff;font-size:16px;margin-bottom:16px;font-weight:600}
+.clients-list{display:flex;flex-direction:column;gap:0}
+.clients-list li{list-style:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.85);font-size:14px;font-weight:500;display:flex;align-items:center;gap:10px}
+.clients-list li:last-child{border-bottom:none}
+.clients-list li::before{content:'';width:6px;height:6px;background:var(--teal);border-radius:50%;flex-shrink:0}
+
+/* ── PORTFÓLIO ────────────────────────────────────────────────────── */
+.port-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.port-item{border-radius:10px;overflow:hidden;background:var(--bg3);box-shadow:0 2px 14px rgba(15,42,67,.06)}
+.port-frame{position:relative;padding-top:56.25%}
+.port-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+
+/* ── PACOTES ──────────────────────────────────────────────────────── */
+.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pkg{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.pkg.dest{border-color:var(--teal);box-shadow:0 10px 40px rgba(18,165,148,.14)}
+.pkg-badge{position:absolute;top:20px;right:20px;background:var(--teal);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.pkg-top{padding:30px 30px 22px;border-bottom:1px solid var(--border)}
+.pkg-num{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.pkg-name{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px}
+.pkg-price{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;color:var(--navy)}
+.pkg-price small{font-size:14px;color:var(--muted);font-weight:500}
+.pkg-body{padding:24px 30px;flex:1}
+.pkg-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+.pkg-list li{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--body);line-height:1.5}
+.pkg-list li::before{content:'✓';flex-shrink:0;width:18px;height:18px;background:var(--tealSoft);color:var(--teal2);font-size:11px;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.pkg-foot{padding:22px 30px;border-top:1px solid var(--border)}
+.pkg-foot .btn{width:100%;justify-content:center}
+
+/* ── ADICIONAIS ───────────────────────────────────────────────────── */
+.addon-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.addon{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.addon-name{font-size:14.5px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.addon-desc{font-size:12.5px;color:var(--muted)}
+.addon-price{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--teal2);white-space:nowrap}
+
+/* ── PROCESSO ─────────────────────────────────────────────────────── */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:12px;overflow:hidden}
+.proc-step{background:var(--white);padding:26px 22px}
+.proc-num{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--teal2);margin-bottom:10px}
+.proc-label{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.proc-desc{font-size:13px;color:var(--muted);line-height:1.55}
+
+/* ── INFORMAÇÕES COMERCIAIS ──────────────────────────────────────── */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.info-item{background:var(--white);padding:22px 24px}
+.info-q{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--teal2);margin-bottom:8px}
+.info-a{font-size:14px;color:var(--body);line-height:1.65}
+
+/* ── CALCULADORA ──────────────────────────────────────────────────── */
+.calc-box{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 4px 30px rgba(15,42,67,.06)}
+.calc-head{background:var(--navy);padding:26px 30px}
+.calc-head h3{color:#fff;font-size:20px;font-weight:600}
+.calc-head p{color:rgba(255,255,255,.6);font-size:13px;margin-top:4px}
+.calc-quick{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.calc-quick button{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:12px;font-weight:600;padding:8px 14px;border-radius:6px;cursor:pointer;transition:background .2s}
+.calc-quick button:hover{background:rgba(255,255,255,.2)}
+
+.calc-day{padding:24px 30px;border-bottom:1px solid var(--border)}
+.calc-day-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:6px}
+.calc-day-title{font-family:'Space Grotesk',sans-serif;font-size:15.5px;font-weight:600;color:var(--navy)}
+.calc-day-rate{font-size:12px;color:var(--muted)}
+.calc-roles{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.calc-role{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-radius:8px;padding:12px 14px}
+.calc-role-label{font-size:13px;font-weight:500;color:var(--body)}
+.qty{display:flex;align-items:center;gap:10px}
+.qty-btn{width:26px;height:26px;border-radius:6px;border:1px solid var(--border);background:var(--white);color:var(--navy);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:all .15s}
+.qty-btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.qty-val{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--navy);min-width:16px;text-align:center}
+
+.calc-section-title{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.edicao-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.edicao-card{border:1.5px solid var(--border);border-radius:8px;padding:16px;cursor:pointer;transition:all .15s}
+.edicao-card:hover{border-color:var(--teal)}
+.edicao-card.sel{border-color:var(--teal);background:var(--tealSoft)}
+.edicao-card-name{font-size:13.5px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.edicao-card-desc{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:8px}
+.edicao-card-price{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--teal2)}
+
+.drone-toggles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.drone-tog{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--body)}
+.tog{width:38px;height:22px;background:var(--border);border-radius:11px;cursor:pointer;position:relative;transition:background .2s;flex-shrink:0}
+.tog::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform .2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.tog.on{background:var(--teal)}
+.tog.on::after{transform:translateX(16px)}
+
+.calc-result{background:var(--bg);padding:26px 30px}
+.calc-lines{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;min-height:24px}
+.calc-line{display:flex;justify-content:space-between;font-size:13.5px;color:var(--body);padding:5px 0;border-bottom:1px solid var(--border)}
+.calc-line-v{color:var(--navy);font-weight:600}
+.calc-empty{font-size:13px;color:var(--muted);font-style:italic}
+.calc-total-row{display:flex;justify-content:space-between;align-items:baseline;padding-top:16px;border-top:2px solid var(--navy);margin-bottom:18px}
+.calc-total-l{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.calc-total-v{font-family:'Space Grotesk',sans-serif;font-size:38px;font-weight:700;color:var(--navy)}
+.calc-note{font-size:11.5px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+
+/* ── CTA FINAL ────────────────────────────────────────────────────── */
+.cta-final{background:linear-gradient(140deg,var(--navy) 0%,var(--navy3) 100%);padding:64px 0;text-align:center;color:#fff}
+.cta-final h2{color:#fff;font-size:clamp(24px,4vw,36px);margin-bottom:12px}
+.cta-final p{color:rgba(255,255,255,.7);font-size:15px;margin-bottom:28px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{background:var(--navy3);color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:12px}
+
+@media(max-width:860px){
+  .sobre-grid,.pkg-grid,.addon-grid,.port-grid,.info-grid,.calc-roles,.edicao-opts{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .hero-dates{grid-template-columns:1fr}
+  .drone-toggles{grid-template-columns:1fr}
+  .greeting{margin-top:-20px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <span class="topbar-logo">CINE<span>GRAPHYA</span></span>
+    <span class="topbar-badge">Proposta Comercial · Uso exclusivo Instituto MILES</span>
+  </div>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="w">
+    <span class="hero-kicker">Cobertura Audiovisual Oficial</span>
+    <h1>Proposta para a cobertura completa do <strong>IV MILES Summit</strong></h1>
+    <p class="hero-sub">Elaborada para o Instituto MILES, com base na solicitação da Comissão Estrutural. Belo Horizonte, 13 a 15 de maio de 2027.</p>
+
+    <div class="hero-dates">
+      <div class="hero-date">
+        <div class="hero-date-tag">13 de maio</div>
+        <div class="hero-date-d">Coquetel de abertura</div>
+        <div class="hero-date-t">19h às 00h</div>
+      </div>
+      <div class="hero-date">
+        <div class="hero-date-tag">14 de maio</div>
+        <div class="hero-date-d">1º dia do Summit</div>
+        <div class="hero-date-t">15h às 21h</div>
+      </div>
+      <div class="hero-date">
+        <div class="hero-date-tag">15 de maio</div>
+        <div class="hero-date-d">2º dia do Summit</div>
+        <div class="hero-date-t">9h às 20h30</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="w">
+  <div class="greeting">
+    <p>Olá, Bruna! Preparamos esta proposta com base no que você descreveu sobre o IV MILES Summit — um dos maiores encontros estudantis de saúde e inovação de Minas Gerais, já na sua 4ª edição.</p>
+    <p>A seguir você encontra <strong>dois pacotes de cobertura completa</strong>, os <strong>serviços adicionais</strong> disponíveis, todas as <strong>informações comerciais</strong> solicitadas e, ao final, uma <strong>calculadora</strong> para montar a combinação exata de profissionais por dia, caso queira personalizar além dos pacotes sugeridos.</p>
+  </div>
+</div>
+
+<!-- ══ SOBRE ═════════════════════════════════════════════════════════ -->
+<section class="sec">
+  <div class="w">
+    <span class="tag">Quem vai cobrir o seu evento</span>
+    <h2 class="sec-h2">César Thierry <em>e a Cinegraphya</em></h2>
+    <div class="sobre-grid">
+      <div>
+        <p>Sou César Thierry, videomaker em Belo Horizonte desde 2010 e fundador da Cinegraphya. Desde 2017, minha atuação é voltada a projetos corporativos e institucionais — exatamente o perfil do MILES Summit.</p>
+        <p>A Cinegraphya é uma operação enxuta e experiente: eu acompanho pessoalmente o planejamento de cada projeto, e trabalho com uma equipe de profissionais parceiros — fotógrafos e videomakers — dimensionada conforme a escala do evento.</p>
+        <p>Já produzimos coberturas para instituições de grande porte, com o mesmo padrão de qualidade e responsabilidade que aplicaríamos ao Summit: <strong>captação profissional em 4K, entrega organizada e cumprimento rigoroso de prazos.</strong></p>
+        <div class="stat-grid">
+          <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Anos de atuação em produção audiovisual</div></div>
+          <div class="stat"><div class="stat-n">40★</div><div class="stat-l">Avaliações 5 estrelas no Google</div></div>
+          <div class="stat"><div class="stat-n">4K</div><div class="stat-l">Padrão de captação em todos os projetos</div></div>
+          <div class="stat"><div class="stat-n">NF</div><div class="stat-l">Nota Fiscal em 100% dos contratos</div></div>
+        </div>
+      </div>
+      <div class="clients-card">
+        <h3>Já produzimos para</h3>
+        <ul class="clients-list">
+          <li>Globo</li>
+          <li>Band — Canal Empreender</li>
+          <li>Sebrae</li>
+          <li>UFMG</li>
+          <li>Santa Casa de Ouro Preto</li>
+          <li>Metrô BH</li>
+          <li>Madero</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ PORTFÓLIO ═════════════════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bg2)">
+  <div class="w">
+    <span class="tag">Portfólio</span>
+    <h2 class="sec-h2">Trabalhos que já <em>produzimos</em></h2>
+    <p class="sec-p">Uma amostra de coberturas institucionais e de eventos com o mesmo padrão que aplicaríamos ao MILES Summit.</p>
+    <div class="port-grid">
+      <div class="port-item"><div class="port-frame"><iframe src="https://www.youtube.com/embed/tK7Vmfta0Zk" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Portfólio Cinegraphya 1"></iframe></div></div>
+      <div class="port-item"><div class="port-frame"><iframe src="https://www.youtube.com/embed/Vngb-6sg4nE" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Portfólio Cinegraphya 2"></iframe></div></div>
+      <div class="port-item"><div class="port-frame"><iframe src="https://www.youtube.com/embed/btJ3dS1GKaM" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Portfólio Cinegraphya 3"></iframe></div></div>
+      <div class="port-item"><div class="port-frame"><iframe src="https://www.youtube.com/embed/4gsD9Va-fSY" loading="lazy" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen title="Portfólio Cinegraphya 4"></iframe></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ PACOTES ═══════════════════════════════════════════════════════ -->
+<section class="sec" id="pacotes">
+  <div class="w">
+    <span class="tag">Cobertura completa · 3 dias</span>
+    <h2 class="sec-h2">Dois formatos de <em>cobertura</em></h2>
+    <p class="sec-p">Ambos cobrem os três dias de programação — coquetel de abertura e os dois dias de Summit — com captação em vídeo 4K e fotografia completa do evento.</p>
+
+    <div class="pkg-grid">
+
+      <!-- PACOTE 1 -->
+      <div class="pkg">
+        <div class="pkg-top">
+          <div class="pkg-num">Pacote 01</div>
+          <div class="pkg-name">Cobertura Essencial</div>
+          <div class="pkg-price">R$ 10.800<small>,00</small></div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-list">
+            <li>1 fotógrafo + 1 videomaker nos 3 dias de evento</li>
+            <li>Captação em vídeo com qualidade 4K</li>
+            <li>Captação das palestras na íntegra com 1 câmera fixa</li>
+            <li>Captação de detalhes para aftermovie com 1 câmera móvel</li>
+            <li>Fotografia completa dos 3 dias de evento</li>
+            <li>Entrega das palestras editadas na íntegra, individualmente</li>
+            <li>1 aftermovie institucional do evento (até 5 min)</li>
+          </ul>
+        </div>
+        <div class="pkg-foot">
+          <button class="btn btn-outline" onclick="carregarPacote(1)">Personalizar este pacote na calculadora ↓</button>
+        </div>
+      </div>
+
+      <!-- PACOTE 2 -->
+      <div class="pkg dest">
+        <div class="pkg-badge">Cobertura ampliada</div>
+        <div class="pkg-top">
+          <div class="pkg-num">Pacote 02</div>
+          <div class="pkg-name">Cobertura Completa</div>
+          <div class="pkg-price">R$ 15.700<small>,00</small></div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-list">
+            <li>1 fotógrafo + 2 videomakers nos 3 dias de evento</li>
+            <li>Captação em vídeo com qualidade 4K</li>
+            <li>Captação das palestras na íntegra com 2 câmeras fixas</li>
+            <li>Captação de detalhes para aftermovie com 1 câmera móvel</li>
+            <li>Fotografia completa dos 3 dias de evento</li>
+            <li>Entrega das palestras editadas na íntegra, individualmente</li>
+            <li>1 aftermovie de resumo por dia de evento (3 no total)</li>
+            <li>1 aftermovie institucional com o resumo geral (até 5 min)</li>
+          </ul>
+        </div>
+        <div class="pkg-foot">
+          <button class="btn btn-coral" onclick="carregarPacote(2)">Personalizar este pacote na calculadora ↓</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ ADICIONAIS ════════════════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bg2)">
+  <div class="w">
+    <span class="tag">Opcionais</span>
+    <h2 class="sec-h2">Serviços <em>adicionais</em></h2>
+    <p class="sec-p">Podem ser incluídos em qualquer um dos dois pacotes, conforme o interesse do Instituto MILES.</p>
+    <div class="addon-grid">
+      <div class="addon">
+        <div>
+          <div class="addon-name">Captação com drone</div>
+          <div class="addon-desc">Imagens aéreas do evento, por dia de cobertura</div>
+        </div>
+        <div class="addon-price">+ R$ 700<span style="font-size:12px;color:var(--muted);font-weight:500">/dia</span></div>
+      </div>
+      <div class="addon">
+        <div>
+          <div class="addon-name">Vídeos curtos para redes sociais</div>
+          <div class="addon-desc">Edição adicional — ativações, patrocinadores, bastidores, entrevistas (até 2 min)</div>
+        </div>
+        <div class="addon-price">+ R$ 150<span style="font-size:12px;color:var(--muted);font-weight:500">/vídeo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ PROCESSO ══════════════════════════════════════════════════════ -->
+<section class="sec">
+  <div class="w">
+    <span class="tag">Como trabalhamos</span>
+    <h2 class="sec-h2" style="text-align:center">Do briefing à <em>entrega</em></h2>
+    <p class="sec-p" style="margin:0 auto 36px;text-align:center">Um único fornecedor do início ao fim — sem terceirizações e sem intermediários.</p>
+    <div class="proc-grid">
+      <div class="proc-step"><div class="proc-num">01</div><div class="proc-label">Briefing</div><p class="proc-desc">Alinhamento com a Comissão Estrutural sobre programação, palco, patrocinadores e prioridades de cobertura.</p></div>
+      <div class="proc-step"><div class="proc-num">02</div><div class="proc-label">Captação</div><p class="proc-desc">Equipe em campo nos 3 dias, com câmeras 4K fixas e móveis, cobrindo palestras, público e bastidores.</p></div>
+      <div class="proc-step"><div class="proc-num">03</div><div class="proc-label">Edição</div><p class="proc-desc">Palestras editadas individualmente e aftermovie(s) com trilha, cor e identidade visual do evento.</p></div>
+      <div class="proc-step"><div class="proc-num">04</div><div class="proc-label">Entrega</div><p class="proc-desc">Material organizado, entregue via Google Drive dentro do prazo combinado.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ INFORMAÇÕES COMERCIAIS ════════════════════════════════════════ -->
+<section class="sec" style="background:var(--bg2)">
+  <div class="w">
+    <span class="tag">Informações comerciais</span>
+    <h2 class="sec-h2">Tudo o que foi <em>solicitado</em></h2>
+    <p class="sec-p">Respondendo item a item ao pedido da Comissão Estrutural.</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-q">Prazo de entrega</div>
+        <div class="info-a">Palestras editadas: até 10 dias úteis após o evento. Aftermovie de resumo diário: até 1 dia útil após cada dia de evento. Aftermovie institucional: até 2 dias úteis após o evento.</div>
+      </div>
+      <div class="info-item">
+        <div class="info-q">Condições de pagamento</div>
+        <div class="info-a">50% para confirmação de agenda e equipe, 50% na entrega final. PIX, boleto ou transferência.</div>
+      </div>
+      <div class="info-item">
+        <div class="info-q">Política de cancelamento</div>
+        <div class="info-a">Cancelamento com mais de 15 dias corridos de antecedência: sem ônus. Com 15 dias ou menos: retenção de 10% do valor, referente à reserva de agenda e equipe.</div>
+      </div>
+      <div class="info-item">
+        <div class="info-q">Nota Fiscal</div>
+        <div class="info-a">Emissão garantida em 100% do serviço. Cinegraphya LTDA — CNPJ 58.999.446/0001-51.</div>
+      </div>
+      <div class="info-item">
+        <div class="info-q">Equipe e equipamentos</div>
+        <div class="info-a">Câmeras Canon Mirrorless 4K, áudio dedicado, iluminação quando necessária. Equipe dimensionada conforme o pacote escolhido.</div>
+      </div>
+      <div class="info-item">
+        <div class="info-q">Serviços adicionais</div>
+        <div class="info-a">Drone (R$ 700/dia) e vídeos curtos adicionais para redes sociais (R$ 150/vídeo) — detalhados acima.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hr">
+
+<!-- ══ CALCULADORA ═══════════════════════════════════════════════════ -->
+<section class="sec" id="calculadora">
+  <div class="w">
+    <span class="tag">Monte sua proposta</span>
+    <h2 class="sec-h2">Calculadora <em>personalizada</em></h2>
+    <p class="sec-p">Ajuste o número de fotógrafos e videomakers em cada dia, o nível de edição e os adicionais desejados. O valor é calculado em tempo real.</p>
+
+    <div class="calc-box">
+      <div class="calc-head">
+        <h3>Configure a cobertura do MILES Summit</h3>
+        <p>Comece do zero ou carregue um dos pacotes sugeridos para ajustar a partir dele.</p>
+        <div class="calc-quick">
+          <button onclick="carregarPacote(1)">Carregar Pacote 01</button>
+          <button onclick="carregarPacote(2)">Carregar Pacote 02</button>
+          <button onclick="limparCalc()">Limpar tudo</button>
+        </div>
+      </div>
+
+      <!-- DIA 1 -->
+      <div class="calc-day">
+        <div class="calc-day-head">
+          <span class="calc-day-title">13/05 — Coquetel de abertura</span>
+          <span class="calc-day-rate">R$ 1.200 / profissional</span>
+        </div>
+        <div class="calc-roles">
+          <div class="calc-role">
+            <span class="calc-role-label">Fotógrafos</span>
+            <div class="qty"><button class="qty-btn" onclick="alt('d1','fot',-1)">−</button><span class="qty-val" id="d1-fot">0</span><button class="qty-btn" onclick="alt('d1','fot',1)">+</button></div>
+          </div>
+          <div class="calc-role">
+            <span class="calc-role-label">Videomakers</span>
+            <div class="qty"><button class="qty-btn" onclick="alt('d1','vid',-1)">−</button><span class="qty-val" id="d1-vid">0</span><button class="qty-btn" onclick="alt('d1','vid',1)">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIA 2 -->
+      <div class="calc-day">
+        <div class="calc-day-head">
+          <span class="calc-day-title">14/05 — 1º dia do Summit</span>
+          <span class="calc-day-rate">R$ 1.200 / profissional</span>
+        </div>
+        <div class="calc-roles">
+          <div class="calc-role">
+            <span class="calc-role-label">Fotógrafos</span>
+            <div class="qty"><button class="qty-btn" onclick="alt('d2','fot',-1)">−</button><span class="qty-val" id="d2-fot">0</span><button class="qty-btn" onclick="alt('d2','fot',1)">+</button></div>
+          </div>
+          <div class="calc-role">
+            <span class="calc-role-label">Videomakers</span>
+            <div class="qty"><button class="qty-btn" onclick="alt('d2','vid',-1)">−</button><span class="qty-val" id="d2-vid">0</span><button class="qty-btn" onclick="alt('d2','vid',1)">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIA 3 -->
+      <div class="calc-day">
+        <div class="calc-day-head">
+          <span class="calc-day-title">15/05 — 2º dia do Summit</span>
+          <span class="calc-day-rate">R$ 2.000 / profissional</span>
+        </div>
+        <div class="calc-roles">
+          <div class="calc-role">
+            <span class="calc-role-label">Fotógrafos</span>
+            <div class="qty"><button class="qty-btn" onclick="alt('d3','fot',-1)">−</button><span class="qty-val" id="d3-fot">0</span><button class="qty-btn" onclick="alt('d3','fot',1)">+</button></div>
+          </div>
+          <div class="calc-role">
+            <span class="calc-role-label">Videomakers</span>
+            <div class="qty"><button class="qty-btn" onclick="alt('d3','vid',-1)">−</button><span class="qty-val" id="d3-vid">0</span><button class="qty-btn" onclick="alt('d3','vid',1)">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDIÇÃO -->
+      <div class="calc-day">
+        <div class="calc-section-title">Nível de edição</div>
+        <div class="edicao-opts">
+          <div class="edicao-card" id="ed-n1" onclick="setEdicao('n1')">
+            <div class="edicao-card-name">Nível 1</div>
+            <div class="edicao-card-desc">Palestras editadas + 1 aftermovie institucional (até 5 min)</div>
+            <div class="edicao-card-price">R$ 2.000</div>
+          </div>
+          <div class="edicao-card" id="ed-n2" onclick="setEdicao('n2')">
+            <div class="edicao-card-name">Nível 2</div>
+            <div class="edicao-card-desc">Palestras editadas + 1 aftermovie diário (3 no total) + 1 aftermovie institucional</div>
+            <div class="edicao-card-price">R$ 2.500</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRONE -->
+      <div class="calc-day">
+        <div class="calc-section-title">Captação com drone (opcional)</div>
+        <div class="drone-toggles">
+          <div class="drone-tog">Dia 13/05<div class="tog" id="tog-drone-d1" onclick="togDrone('d1')"></div></div>
+          <div class="drone-tog">Dia 14/05<div class="tog" id="tog-drone-d2" onclick="togDrone('d2')"></div></div>
+          <div class="drone-tog">Dia 15/05<div class="tog" id="tog-drone-d3" onclick="togDrone('d3')"></div></div>
+        </div>
+      </div>
+
+      <!-- SHORTS -->
+      <div class="calc-day" style="border-bottom:none">
+        <div class="calc-day-head">
+          <span class="calc-day-title">Vídeos curtos adicionais (redes sociais)</span>
+          <span class="calc-day-rate">R$ 150 / vídeo</span>
+        </div>
+        <div class="calc-role" style="max-width:220px">
+          <span class="calc-role-label">Quantidade</span>
+          <div class="qty"><button class="qty-btn" onclick="altShorts(-1)">−</button><span class="qty-val" id="shorts-val">0</span><button class="qty-btn" onclick="altShorts(1)">+</button></div>
+        </div>
+      </div>
+
+      <!-- RESULTADO -->
+      <div class="calc-result">
+        <div class="calc-lines" id="calc-lines"><div class="calc-empty">Ajuste as opções acima para ver o resumo do orçamento.</div></div>
+        <div class="calc-total-row">
+          <span class="calc-total-l">Total estimado</span>
+          <span class="calc-total-v" id="calc-total">R$ 0</span>
+        </div>
+        <div class="calc-note">Valor calculado com base nas seleções acima. Sujeito à confirmação final após alinhamento de briefing com a Comissão Estrutural.</div>
+        <a id="wa-btn" href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20Bruna!%20Vim%20pela%20proposta%20do%20IV%20MILES%20Summit." target="_blank" rel="noopener" class="btn btn-coral" style="width:100%;justify-content:center">Enviar esta simulação para a Cinegraphya</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ═════════════════════════════════════════════════════ -->
+<section class="cta-final">
+  <div class="w">
+    <h2>Vamos alinhar os próximos passos?</h2>
+    <p>Fico à disposição para uma conversa rápida e ajustar qualquer detalhe da proposta com a Comissão Estrutural.</p>
+    <div class="cta-btns">
+      <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20Bruna!%20Sou%20o%20C%C3%A9sar%2C%20da%20Cinegraphya.%20Vamos%20conversar%20sobre%20a%20cobertura%20do%20IV%20MILES%20Summit%3F" class="btn btn-coral" target="_blank" rel="noopener">Falar com o César no WhatsApp</a>
+      <a href="mailto:contato@cinegraphya.com.br" class="btn btn-outline-light">contato@cinegraphya.com.br</a>
+    </div>
+  </div>
+</section>
+
+<footer>Cinegraphya LTDA · CNPJ 58.999.446/0001-51 · Savassi, Belo Horizonte / MG · Proposta preparada exclusivamente para o Instituto MILES</footer>
+
+<script>
+const RATE_12 = 1200, RATE_3 = 2000, DRONE = 700, SHORT = 150;
+const EDICAO = { n1: { valor: 2000, label: 'Edição — Nível 1 (palestras + aftermovie institucional)' },
+                 n2: { valor: 2500, label: 'Edição — Nível 2 (palestras + 1 aftermovie diário + institucional)' } };
+
+let state = {
+  d1:{fot:0,vid:0}, d2:{fot:0,vid:0}, d3:{fot:0,vid:0},
+  edicao:null,
+  droneD1:false, droneD2:false, droneD3:false,
+  shorts:0
+};
+
+function alt(dia, papel, delta){
+  state[dia][papel] = Math.max(0, state[dia][papel] + delta);
+  document.getElementById(dia+'-'+papel).textContent = state[dia][papel];
+  recalc();
+}
+
+function altShorts(delta){
+  state.shorts = Math.max(0, state.shorts + delta);
+  document.getElementById('shorts-val').textContent = state.shorts;
+  recalc();
+}
+
+function setEdicao(nivel){
+  state.edicao = (state.edicao === nivel) ? null : nivel;
+  document.getElementById('ed-n1').classList.toggle('sel', state.edicao === 'n1');
+  document.getElementById('ed-n2').classList.toggle('sel', state.edicao === 'n2');
+  recalc();
+}
+
+function togDrone(dia){
+  const key = 'drone' + dia.charAt(0).toUpperCase() + dia.slice(1);
+  state[key] = !state[key];
+  document.getElementById('tog-drone-'+dia).classList.toggle('on', state[key]);
+  recalc();
+}
+
+function fmt(v){ return 'R$ ' + v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+function recalc(){
+  const linhas = [];
+  let total = 0;
+
+  const dias = [
+    {key:'d1', label:'13/05 — Coquetel de abertura', rate:RATE_12},
+    {key:'d2', label:'14/05 — 1º dia do Summit', rate:RATE_12},
+    {key:'d3', label:'15/05 — 2º dia do Summit', rate:RATE_3},
+  ];
+
+  dias.forEach(d => {
+    const qtd = state[d.key].fot + state[d.key].vid;
+    if(qtd > 0){
+      const valor = qtd * d.rate;
+      const partes = [];
+      if(state[d.key].fot > 0) partes.push(state[d.key].fot + ' fotógrafo' + (state[d.key].fot>1?'s':''));
+      if(state[d.key].vid > 0) partes.push(state[d.key].vid + ' videomaker' + (state[d.key].vid>1?'s':''));
+      linhas.push([d.label + ' — ' + partes.join(' + '), valor]);
+      total += valor;
+    }
+  });
+
+  if(state.edicao){
+    linhas.push([EDICAO[state.edicao].label, EDICAO[state.edicao].valor]);
+    total += EDICAO[state.edicao].valor;
+  }
+
+  const droneDias = ['droneD1','droneD2','droneD3'].filter(k => state[k]).length;
+  if(droneDias > 0){
+    const valor = droneDias * DRONE;
+    linhas.push(['Captação com drone (' + droneDias + ' dia' + (droneDias>1?'s':'') + ')', valor]);
+    total += valor;
+  }
+
+  if(state.shorts > 0){
+    const valor = state.shorts * SHORT;
+    linhas.push([state.shorts + ' vídeo(s) curto(s) adicional(is)', valor]);
+    total += valor;
+  }
+
+  const linesEl = document.getElementById('calc-lines');
+  if(linhas.length === 0){
+    linesEl.innerHTML = '<div class="calc-empty">Ajuste as opções acima para ver o resumo do orçamento.</div>';
+  } else {
+    linesEl.innerHTML = linhas.map(l => '<div class="calc-line"><span>'+l[0]+'</span><span class="calc-line-v">'+fmt(l[1])+'</span></div>').join('');
+  }
+  document.getElementById('calc-total').textContent = fmt(total);
+
+  let msg = 'Olá, Bruna! Montei uma configuração de orçamento para o IV MILES Summit:\n\n';
+  if(linhas.length === 0){
+    msg = 'Olá, Bruna! Vim pela proposta do IV MILES Summit e gostaria de conversar sobre a cobertura.';
+  } else {
+    linhas.forEach(l => msg += '• ' + l[0] + ': ' + fmt(l[1]) + '\n');
+    msg += '\nTotal estimado: ' + fmt(total) + '\n\nPodemos conversar sobre os próximos passos?';
+  }
+  document.getElementById('wa-btn').href = 'https://api.whatsapp.com/send?phone=5531975059088&text=' + encodeURIComponent(msg);
+}
+
+function limparCalc(){
+  state = { d1:{fot:0,vid:0}, d2:{fot:0,vid:0}, d3:{fot:0,vid:0}, edicao:null, droneD1:false, droneD2:false, droneD3:false, shorts:0 };
+  ['d1','d2','d3'].forEach(d => { document.getElementById(d+'-fot').textContent='0'; document.getElementById(d+'-vid').textContent='0'; });
+  document.getElementById('shorts-val').textContent = '0';
+  document.getElementById('ed-n1').classList.remove('sel');
+  document.getElementById('ed-n2').classList.remove('sel');
+  ['d1','d2','d3'].forEach(d => document.getElementById('tog-drone-'+d).classList.remove('on'));
+  recalc();
+}
+
+function carregarPacote(n){
+  if(n === 1){
+    state = { d1:{fot:1,vid:1}, d2:{fot:1,vid:1}, d3:{fot:1,vid:1}, edicao:'n1', droneD1:false, droneD2:false, droneD3:false, shorts:0 };
+  } else {
+    state = { d1:{fot:1,vid:2}, d2:{fot:1,vid:2}, d3:{fot:1,vid:2}, edicao:'n2', droneD1:false, droneD2:false, droneD3:false, shorts:0 };
+  }
+  ['d1','d2','d3'].forEach(d => { document.getElementById(d+'-fot').textContent=state[d].fot; document.getElementById(d+'-vid').textContent=state[d].vid; });
+  document.getElementById('shorts-val').textContent = '0';
+  document.getElementById('ed-n1').classList.toggle('sel', state.edicao==='n1');
+  document.getElementById('ed-n2').classList.toggle('sel', state.edicao==='n2');
+  ['d1','d2','d3'].forEach(d => document.getElementById('tog-drone-'+d).classList.remove('on'));
+  recalc();
+  document.getElementById('calculadora').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+recalc();
+</script>
+</body>
+</html>
