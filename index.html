@@ -1157,62 +1157,6 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
   font-weight: 300;
 }
 
-/* ── Label ── */
-.cg-label {
-  font-family: 'Jost', 'Helvetica Neue', sans-serif;
-  font-size: .72rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(201,150,122,.8);
-  display: block;
-  margin-bottom: .55rem;
-}
-
-/* ── Checkbox group ── */
-.cg-checks {
-  display: flex;
-  flex-direction: column;
-  gap: .45rem;
-  margin-bottom: 1.4rem;
-}
-.cg-check-label {
-  display: flex;
-  align-items: center;
-  gap: .65rem;
-  cursor: pointer;
-  font-size: .88rem;
-  color: rgba(255,255,255,.7);
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-  transition: color .2s;
-}
-.cg-check-label:hover { color: #e8cfc4; }
-.cg-check-label input[type="checkbox"] {
-  width: 16px; height: 16px;
-  accent-color: #c9967a;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-/* ── WhatsApp field ── */
-.cg-field-group { margin-bottom: 1.4rem; }
-.cg-input {
-  width: 100%;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(201,150,122,.25);
-  border-radius: 3px;
-  padding: .7rem 1rem;
-  color: #f5ede8;
-  font-family: 'Jost', sans-serif;
-  font-size: .9rem;
-  font-weight: 300;
-  outline: none;
-  transition: border-color .2s;
-  box-sizing: border-box;
-}
-.cg-input::placeholder { color: rgba(255,255,255,.25); }
-.cg-input:focus { border-color: rgba(201,150,122,.6); }
-
 /* ── Divider ── */
 .cg-divider {
   height: 1px;
@@ -1312,57 +1256,16 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
       </h2>
       <p class="cg-popup-sub">
         Videomaker em BH com 15 anos de experiência.<br>
-        Me conta — que tipo de vídeo você precisa?
+        Deseja uma cotação rápida e personalizada? Clique no botão abaixo, descreva o que precisa, e já te respondemos.
       </p>
-
-      <!-- Q1: tipo de vídeo -->
-      <span class="cg-label">Que tipo de vídeo você precisa?</span>
-      <div class="cg-checks" id="cg-checks">
-        <label class="cg-check-label">
-          <input type="checkbox" name="tipo" value="Vídeos para Redes Sociais (Reels, Instagram, TikTok)">
-          Vídeos para Redes Sociais (Reels, Instagram)
-        </label>
-        <label class="cg-check-label">
-          <input type="checkbox" name="tipo" value="Cobertura de Evento Corporativo">
-          Cobertura de Evento Corporativo
-        </label>
-        <label class="cg-check-label">
-          <input type="checkbox" name="tipo" value="Vídeo Institucional para Empresa">
-          Vídeo Institucional para Empresa
-        </label>
-        <label class="cg-check-label">
-          <input type="checkbox" name="tipo" value="Filmagem com Drone">
-          Filmagem com Drone
-        </label>
-        <label class="cg-check-label">
-          <input type="checkbox" name="tipo" value="Gravação de Palestra ou Workshop">
-          Gravação de Palestra ou Workshop
-        </label>
-        <label class="cg-check-label">
-          <input type="checkbox" name="tipo" value="Outro / Ainda não sei">
-          Outro / Ainda não sei
-        </label>
-      </div>
-
-      <!-- Q2: WhatsApp -->
-      <div class="cg-field-group">
-        <span class="cg-label">Quer deixar seu WhatsApp? <span style="color:rgba(255,255,255,.25);font-size:.65rem;letter-spacing:0;text-transform:none">(opcional)</span></span>
-        <input type="tel" id="cg-whatsapp" class="cg-input"
-          placeholder="(31) 9 9999-9999"
-          maxlength="20">
-      </div>
 
       <div class="cg-divider"></div>
 
       <a id="cg-btn-wa"
         href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Cinegraphya%20e%20gostaria%20de%20um%20or%C3%A7amento."
-        target="_blank" rel="noopener" class="cg-btn-wa" id="cg-btn-wa">
-        💬 &nbsp;Enviar minhas respostas no WhatsApp
+        target="_blank" rel="noopener" class="cg-btn-wa">
+        💬 &nbsp;Quero uma cotação agora
       </a>
-
-      <p class="cg-popup-footer">
-        Suas seleções serão enviadas como mensagem no WhatsApp.
-      </p>
     </div>
 
     <!-- Success -->
@@ -1431,46 +1334,6 @@ new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,a
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closePopup();
   });
-
-  /* ── Coletar seleções ── */
-  function getChecked() {
-    var boxes = document.querySelectorAll('#cg-checks input[type="checkbox"]:checked');
-    var vals = [];
-    boxes.forEach(function(b) { vals.push(b.value); });
-    return vals;
-  }
-
-  /* ── Atualizar link do WhatsApp em tempo real ── */
-  function updateWALink() {
-    var tipos   = getChecked();
-    var waNum   = document.getElementById('cg-whatsapp').value.trim();
-
-    var msg = 'Olá! Vim pelo site da Cinegraphya.';
-
-    if (tipos.length > 0) {
-      msg += '%0A%0AServiços de interesse:%0A';
-      tipos.forEach(function(t) { msg += '• ' + t + '%0A'; });
-    }
-
-    if (waNum) {
-      msg += '%0AMeu WhatsApp: ' + waNum;
-    }
-
-    msg += '%0A%0AGostaria de receber um orçamento.';
-
-    waBtn.href = 'https://api.whatsapp.com/send?phone=5531975059088&text=' + encodeURIComponent(
-      'Olá! Vim pelo site da Cinegraphya.' +
-      (tipos.length > 0 ? '\n\nServiços de interesse:\n' + tipos.map(function(t){ return '• ' + t; }).join('\n') : '') +
-      (waNum ? '\n\nMeu WhatsApp: ' + waNum : '') +
-      '\n\nGostaria de receber um orçamento.'
-    );
-  }
-
-  /* Atualizar link sempre que algo mudar */
-  document.querySelectorAll('#cg-checks input[type="checkbox"]').forEach(function(cb) {
-    cb.addEventListener('change', updateWALink);
-  });
-  document.getElementById('cg-whatsapp').addEventListener('input', updateWALink);
 
   /* Fechar popup ao clicar no botão WA */
   waBtn.addEventListener('click', function() {
