@@ -231,13 +231,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 /* ════════════════════════════════════════════════════════
    QUOTE BAR
 ════════════════════════════════════════════════════════ */
-.quote-bar{background:#0F0F0A;
+.quote-bar{background:var(--bg3);
   border-bottom:1px solid var(--border);padding:22px 0}
 .quote-inner{display:flex;align-items:flex-start;gap:16px}
 .quote-mark{font-family:'Crimson Pro',serif;font-size:52px;
   color:var(--border2);line-height:1;flex-shrink:0;margin-top:-8px}
 .quote-text{font-family:'Crimson Pro',serif;font-style:italic;
-  font-size:clamp(14px,3vw,18px);color:#C0B8A8;line-height:1.6}
+  font-size:clamp(14px,3vw,18px);color:var(--body);line-height:1.6}
 .quote-attr{font-size:var(--fs-xs);font-weight:600;
   letter-spacing:.1em;text-transform:uppercase;
   color:var(--gold);margin-top:10px}
@@ -289,13 +289,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .price-table tr{border-bottom:1px solid var(--border)}
 .price-table tr:last-child{border-bottom:none}
 .price-table td{padding:14px 16px;background:var(--bg2)}
-.price-table tr:last-child td{background:#0F0F0A}
+.price-table tr:last-child td{background:var(--bg2)}
 .price-table td:first-child{font-size:var(--fs-sm);font-weight:500;
   color:var(--white);line-height:1.4}
 .price-table td:last-child{text-align:right;white-space:nowrap;
   font-family:'Bebas Neue',sans-serif;font-size:24px;
   color:var(--gold);letter-spacing:.04em;width:1%}
-.included-note{background:#0F0F0A;border:1px solid var(--border2);
+.included-note{background:var(--bg3);border:1px solid var(--border);
   border-top:none;padding:11px 16px;font-size:10px;font-weight:600;
   color:var(--muted);letter-spacing:.06em;text-transform:uppercase;
   margin-bottom:32px;line-height:1.6}
@@ -369,7 +369,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .rcard-stars{font-size:var(--fs-sm);color:var(--gold);
   letter-spacing:.08em;margin-bottom:10px}
 .rcard-text{font-family:'Crimson Pro',serif;font-style:italic;
-  font-size:var(--fs-base);color:#C0B8A8;
+  font-size:var(--fs-base);color:var(--body);
   line-height:1.65;flex:1;margin-bottom:14px}
 .rcard-name{font-size:var(--fs-xs);font-weight:600;
   letter-spacing:.06em;text-transform:uppercase;color:var(--white)}
@@ -1066,288 +1066,6 @@ window.addEventListener('load',sendH);
 window.addEventListener('resize',sendH);
 new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,attributes:true});
 </script>
-
-<!-- ═══════════════════════════════════════════════════════════════
-     CINEGRAPHYA — POPUP DE QUALIFICAÇÃO DE LEAD
-     EmailJS: serviço gratuito de envio de e-mail via JS
-     Dispara após 10 segundos OU 40% de scroll
-═══════════════════════════════════════════════════════════════ -->
-
-
-<style>
-/* ── Overlay ── */
-#cg-popup-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(42,34,24,.55);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  z-index: 99999;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  animation: cgFadeIn .35s ease;
-}
-#cg-popup-overlay.active { display: flex; }
-@keyframes cgFadeIn { from{opacity:0} to{opacity:1} }
-
-/* ── Card ── */
-#cg-popup {
-  background: #0f0d0b;
-  border: 1px solid rgba(201,150,122,.25);
-  border-radius: 6px;
-  max-width: 480px;
-  width: 100%;
-  padding: 2.2rem 2rem 1.8rem;
-  position: relative;
-  box-shadow: 0 24px 64px rgba(0,0,0,.7);
-  animation: cgSlideUp .4s cubic-bezier(.22,1,.36,1);
-}
-@keyframes cgSlideUp { from{transform:translateY(28px);opacity:0} to{transform:translateY(0);opacity:1} }
-
-/* ── Close ── */
-#cg-popup-close {
-  position: absolute;
-  top: 1rem; right: 1.2rem;
-  background: none; border: none;
-  color: rgba(255,255,255,.35);
-  font-size: 1.3rem; cursor: pointer;
-  line-height: 1; transition: color .2s;
-}
-#cg-popup-close:hover { color: #c9967a; }
-
-/* ── Logo mark ── */
-.cg-popup-brand {
-  display: flex;
-  align-items: center;
-  gap: .55rem;
-  margin-bottom: 1.4rem;
-}
-.cg-popup-brand-dot {
-  width: 8px; height: 8px;
-  background: #c9967a;
-  transform: rotate(45deg);
-  flex-shrink: 0;
-}
-.cg-popup-brand-name {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: .85rem;
-  font-weight: 400;
-  color: #c9967a;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
-/* ── Greeting ── */
-.cg-popup-greeting {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 400;
-  color: #f5ede8;
-  line-height: 1.3;
-  margin-bottom: .5rem;
-}
-.cg-popup-greeting em { font-style: italic; color: #c9967a; }
-
-.cg-popup-sub {
-  font-size: .85rem;
-  color: rgba(255,255,255,.45);
-  margin-bottom: 1.6rem;
-  line-height: 1.5;
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-}
-
-/* ── Divider ── */
-.cg-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(201,150,122,.2), transparent);
-  margin: 1.2rem 0;
-}
-
-/* ── CTA text ── */
-.cg-cta-text {
-  font-size: .82rem;
-  color: rgba(255,255,255,.45);
-  text-align: center;
-  margin-bottom: 1rem;
-  font-family: 'Jost', sans-serif;
-  font-weight: 300;
-}
-
-/* ── Buttons ── */
-.cg-btn-wa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .6rem;
-  width: 100%;
-  background: #25d366;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  padding: .85rem;
-  font-family: 'Jost', sans-serif;
-  font-size: .82rem;
-  font-weight: 400;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background .2s;
-  margin-bottom: .7rem;
-}
-.cg-btn-wa:hover { background: #1da851; }
-
-
-/* ── Success state ── */
-#cg-popup-success {
-  display: none;
-  text-align: center;
-  padding: 1.5rem 0;
-}
-.cg-success-icon {
-  font-size: 2.5rem;
-  margin-bottom: .8rem;
-}
-.cg-success-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: #c9967a;
-  margin-bottom: .4rem;
-}
-.cg-success-sub {
-  font-size: .82rem;
-  color: rgba(255,255,255,.45);
-  font-family: 'Jost', sans-serif;
-}
-
-/* ── Footer note ── */
-.cg-popup-footer {
-  font-size: .68rem;
-  color: rgba(255,255,255,.2);
-  text-align: center;
-  margin-top: 1rem;
-  font-family: 'Jost', sans-serif;
-}
-
-/* Mobile adjustments */
-@media (max-width: 500px) {
-  #cg-popup { padding: 1.8rem 1.4rem 1.4rem; }
-  .cg-popup-greeting { font-size: 1.15rem; }
-}
-</style>
-
-<!-- POPUP HTML -->
-<div id="cg-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="cg-popup-title">
-  <div id="cg-popup">
-
-    <button id="cg-popup-close" aria-label="Fechar">✕</button>
-
-    <!-- Brand -->
-    <div class="cg-popup-brand">
-      <div class="cg-popup-brand-dot"></div>
-      <span class="cg-popup-brand-name">Cinegraphya</span>
-    </div>
-
-    <!-- Form -->
-    <div id="cg-popup-form">
-      <h2 class="cg-popup-greeting" id="cg-popup-title">
-        Olá! Bem-vindo à<br><em>Cinegraphya</em>
-      </h2>
-      <p class="cg-popup-sub">
-        Videomaker em BH com 15 anos de experiência.<br>
-        Deseja uma cotação rápida e personalizada? Clique no botão abaixo, descreva o que precisa, e já te respondemos.
-      </p>
-
-      <div class="cg-divider"></div>
-
-      <a id="cg-btn-wa"
-        href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Cinegraphya%20e%20gostaria%20de%20um%20or%C3%A7amento."
-        target="_blank" rel="noopener" class="cg-btn-wa">
-        💬 &nbsp;Quero uma cotação agora
-      </a>
-    </div>
-
-    <!-- Success -->
-    <div id="cg-popup-success">
-      <div class="cg-success-icon">✦</div>
-      <div class="cg-success-title">Obrigado pelo contato!</div>
-      <p class="cg-success-sub">
-        Recebemos suas informações e entraremos em contato em breve.<br>
-        Ou clique abaixo para falar agora pelo WhatsApp.
-      </p>
-      <br>
-      <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
-        target="_blank" rel="noopener" class="cg-btn-wa" style="margin-top:.8rem">
-        💬 &nbsp;WhatsApp
-      </a>
-    </div>
-
-  </div>
-</div>
-
-<script>
-(function() {
-  var overlay  = document.getElementById('cg-popup-overlay');
-  var closeBtn = document.getElementById('cg-popup-close');
-  var waBtn    = document.getElementById('cg-btn-wa');
-  var shown    = false;
-
-  /* ── Não mostrar se já foi mostrado nesta sessão ── */
-  try {
-    if (sessionStorage.getItem('cg_popup_shown')) {
-      shown = true;
-    }
-  } catch(e) {}
-
-  /* ── Trigger: 10s OU 40% de scroll ── */
-  function showPopup() {
-    if (shown) return;
-    if (window.location.hash) return;
-    shown = true;
-    overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  var timer = setTimeout(showPopup, 10000);
-
-  window.addEventListener('scroll', function onScroll() {
-    var scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    if (scrolled >= 0.40) {
-      clearTimeout(timer);
-      showPopup();
-      window.removeEventListener('scroll', onScroll);
-    }
-  });
-
-  /* ── Fechar ── */
-  function closePopup() {
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-    try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
-  }
-
-  closeBtn.addEventListener('click', closePopup);
-  overlay.addEventListener('click', function(e) {
-    if (e.target === overlay) closePopup();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closePopup();
-  });
-
-  /* Fechar popup ao clicar no botão WA */
-  waBtn.addEventListener('click', function() {
-    try { sessionStorage.setItem('cg_popup_shown', '1'); } catch(e) {}
-    setTimeout(closePopup, 500);
-  });
-
-})();
-</script>
-<!-- ═══════════════════════════════════════════════════════════════
-     /POPUP CINEGRAPHYA
-═══════════════════════════════════════════════════════════════ -->
 
 </body>
 </html>
