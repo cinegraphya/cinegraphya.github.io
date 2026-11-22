@@ -577,6 +577,38 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   .footer-cols{grid-template-columns:2fr 1fr 1fr;gap:40px}
   .footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}
 }
+
+/* ── Vídeos do portfólio em popup ── */
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(min-width:900px){.vgrid{grid-template-columns:repeat(5,1fr);gap:16px}}
+.vtile{transition:transform .25s ease,box-shadow .25s ease}
+.vtile:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(42,34,24,.18)}
+.vthumb{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:2;border:0;padding:0;margin:0;background:transparent;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.vthumb:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.vmodal{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100000;display:flex;align-items:center;justify-content:center;
+  background:rgba(24,18,10,.78);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);
+  opacity:0;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s;overscroll-behavior:contain}
+.vmodal.is-open{opacity:1;visibility:visible;transition:opacity .3s ease,visibility 0s}
+.vmodal-box{position:relative;--h:min(70vh,calc(90vw * 16 / 9));height:var(--h);width:calc(var(--h) * 9 / 16);
+  background:#000;border-radius:16px;box-shadow:0 24px 80px rgba(0,0,0,.55);
+  opacity:0;transform:translateY(18px) scale(.92);transition:transform .4s cubic-bezier(.2,.8,.2,1),opacity .3s ease}
+@supports(height:1dvh){.vmodal-box{--h:min(70dvh,calc(90vw * 16 / 9))}}
+@media(max-height:520px) and (orientation:landscape){.vmodal-box{--h:min(86vh,calc(90vw * 16 / 9))}}
+@media(min-width:900px){.vmodal-box{--h:min(88vh,920px)}}
+@supports(height:1dvh){@media(min-width:900px){.vmodal-box{--h:min(88dvh,920px)}}}
+.vmodal.is-open .vmodal-box{opacity:1;transform:none}
+.vmodal-frame{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:16px;overflow:hidden;background:#000}
+.vmodal-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;opacity:0;transition:opacity .45s ease}
+.vmodal-frame iframe.is-ready{opacity:1}
+.vmodal-spin{position:absolute;left:50%;top:50%;width:36px;height:36px;margin:-18px 0 0 -18px;border:3px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;animation:vspin .9s linear infinite}
+@keyframes vspin{to{transform:rotate(360deg)}}
+.vmodal-close{position:absolute;top:-14px;left:-14px;z-index:3;width:44px;height:44px;padding:0;border-radius:50%;
+  border:2px solid rgba(255,255,255,.92);background:rgba(24,18,10,.94);color:#fff;font-size:26px;line-height:1;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:transform .2s ease,background .2s ease}
+.vmodal-close:hover{background:var(--gold);transform:scale(1.08)}
+.vmodal-close:focus-visible{outline:3px solid #fff;outline-offset:2px}
+html.vmodal-open,html.vmodal-open body{overflow:hidden}
+@media(prefers-reduced-motion:reduce){.vmodal,.vmodal-box,.vmodal-frame iframe,.vtile{transition:none!important}.vmodal-box{transform:none}}
 </style>
 <script type="application/ld+json">
 {
@@ -588,7 +620,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       "name": "Quanto custa produção de vídeo para redes sociais em BH?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A edição de vídeos para redes sociais (até 90 segundos) custa a partir de R$ 150 por vídeo na Cinegraphya. Projetos com múltiplos vídeos têm desconto progressivo. Solicite um orçamento personalizado."
+        "text": "A edição de vídeos para redes sociais (até 90 segundos) custa a partir de R$ 190 por Reels (cortes a partir de R$ 90) na Cinegraphya. Projetos com múltiplos vídeos têm desconto progressivo. Solicite um orçamento personalizado."
       }
     },
     {
@@ -684,41 +716,46 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <span class="sec-tag reveal">Portfólio</span>
   <h2 class="sec-title reveal" id="portfolio-redes-h2">Conteúdo que já produzimos</h2>
   <div class="sec-line reveal"></div>
-  <div class="reveal" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:32px">
+  <div class="reveal vgrid" style="margin-top:32px">
 
-    <div style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
-      <iframe src="https://www.youtube.com/embed/L8iYutJ8kx8"
+    <div class="vtile" style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
+      <iframe tabindex="-1" src="https://www.youtube.com/embed/L8iYutJ8kx8"
         style="position:absolute;inset:0;width:100%;height:100%;border:none"
         allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
         allowfullscreen loading="lazy" title="Portfólio Redes Sociais Cinegraphya 1"></iframe>
+      <button type="button" class="vthumb" data-yt="L8iYutJ8kx8" aria-label="Ampliar vídeo 1 do portfólio"></button>
     </div>
 
-    <div style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
-      <iframe src="https://www.youtube.com/embed/l8nTBWW-OCk"
+    <div class="vtile" style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
+      <iframe tabindex="-1" src="https://www.youtube.com/embed/l8nTBWW-OCk"
         style="position:absolute;inset:0;width:100%;height:100%;border:none"
         allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
         allowfullscreen loading="lazy" title="Portfólio Redes Sociais Cinegraphya 2"></iframe>
+      <button type="button" class="vthumb" data-yt="l8nTBWW-OCk" aria-label="Ampliar vídeo 2 do portfólio"></button>
     </div>
 
-    <div style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
-      <iframe src="https://www.youtube.com/embed/CiBHahfC_fg"
+    <div class="vtile" style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
+      <iframe tabindex="-1" src="https://www.youtube.com/embed/CiBHahfC_fg"
         style="position:absolute;inset:0;width:100%;height:100%;border:none"
         allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
         allowfullscreen loading="lazy" title="Portfólio Redes Sociais Cinegraphya 3"></iframe>
+      <button type="button" class="vthumb" data-yt="CiBHahfC_fg" aria-label="Ampliar vídeo 3 do portfólio"></button>
     </div>
 
-    <div style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
-      <iframe src="https://www.youtube.com/embed/7Aj-DrVlEGY"
+    <div class="vtile" style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
+      <iframe tabindex="-1" src="https://www.youtube.com/embed/7Aj-DrVlEGY"
         style="position:absolute;inset:0;width:100%;height:100%;border:none"
         allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
         allowfullscreen loading="lazy" title="Portfólio Redes Sociais Cinegraphya 4"></iframe>
+      <button type="button" class="vthumb" data-yt="7Aj-DrVlEGY" aria-label="Ampliar vídeo 4 do portfólio"></button>
     </div>
 
-    <div style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
-      <iframe src="https://www.youtube.com/embed/943fGD_sUE8"
+    <div class="vtile" style="position:relative;padding-top:177.78%;border-radius:6px;overflow:hidden;background:var(--bg3)">
+      <iframe tabindex="-1" src="https://www.youtube.com/embed/943fGD_sUE8"
         style="position:absolute;inset:0;width:100%;height:100%;border:none"
         allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"
         allowfullscreen loading="lazy" title="Portfólio Redes Sociais Cinegraphya 5"></iframe>
+      <button type="button" class="vthumb" data-yt="943fGD_sUE8" aria-label="Ampliar vídeo 5 do portfólio"></button>
     </div>
 
   </div>
@@ -756,11 +793,11 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <tr><td>1 hora de cobertura</td><td>R$ 400</td></tr>
     <tr><td>2 horas de cobertura</td><td>R$ 600</td></tr>
     <tr><td>4 horas de cobertura</td><td>R$ 950</td></tr>
-    <tr><td>6 horas de cobertura</td><td>R$ 1.100</td></tr>
-    <tr><td>8 horas — dia completo</td><td>R$ 1.400</td></tr>
+    <tr><td>6 horas de cobertura</td><td>R$ 1.200</td></tr>
+    <tr><td>8 horas — dia completo</td><td>R$ 1.600</td></tr>
   </table>
   </div>
-  <div class="included-note reveal"><em>INCLUSO:</em> Canon 4K · Drone DJI · Iluminação LED · Lapela sem fio · Gravador de áudio · Teleprompter</div>
+  <div class="included-note reveal"><em>INCLUSO:</em> Canon 4K · Iluminação LED · Lapela sem fio · Gravador de áudio · Teleprompter</div>
 
   <span class="sec-tag reveal">Pack Edição</span>
   <h2 class="sec-title reveal" id="redes-edi-h2">Edição profissional por vídeo</h2>
@@ -768,11 +805,14 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <p class="sec-body reveal">Edição individual com cortes dinâmicos, trilha, legendas e identidade visual.</p>
   <div class="price-wrap reveal">
   <table class="price-table">
-    <tr><td>Vídeo para redes sociais (até 90s)</td><td>R$ 150</td></tr>
-    <tr><td>Vídeo institucional (até 5 min)</td><td>R$ 800</td></tr>
+    <tr><td>Cortes para redes sociais (até 60s)</td><td>R$ 90</td></tr>
+    <tr><td>Reels (até 90s)</td><td>R$ 190</td></tr>
+    <tr><td>Reels I.A. (até 90s)</td><td>R$ 290</td></tr>
+    <tr><td>Edição institucional (até 5 min)</td><td>R$ 1.290</td></tr>
+    <tr><td>Outros projetos</td><td>Sob consulta</td></tr>
   </table>
   </div>
-  <div class="included-note reveal" style="margin-bottom:0">Desconto por volume nos vídeos para redes sociais: 3 vídeos a R$ 140 cada · 5 vídeos a R$ 130 cada · 10 ou mais a R$ 100 cada. <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." style="color:var(--gold)" target="_blank" rel="noopener">Consulte para projetos maiores.</a></div>
+  <div class="included-note reveal" style="margin-bottom:0">Desconto por volume nos Reels: 3 vídeos a R$ 180 cada · 5 vídeos a R$ 170 cada · 10 ou mais a R$ 140 cada. <a href="https://api.whatsapp.com/send?phone=5531975059088&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." style="color:var(--gold)" target="_blank" rel="noopener">Consulte para projetos maiores.</a></div>
   <div class="reveal" style="margin-top:28px"><a href="/proposta/#calculadora" class="btn btn-outline">Simular meu orçamento na calculadora →</a></div>
 </div>
 </section>
@@ -786,12 +826,12 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <div class="sec-line reveal"></div>
   <p class="sec-body reveal">Pontos de partida para resolver a produção de uma vez, da gravação aos vídeos prontos para postar. Os valores já consideram o desconto por volume.</p>
   <div class="combo-grid">
-    <div class="combo-card reveal"><p class="combo-tag">Para começar</p><h3 class="combo-title">Primeiro conteúdo</h3><ul class="combo-items"><li>1h de captação</li><li>1 vídeo para redes sociais (até 90s)</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 550</p></div>
-    <div class="combo-card reveal d1"><p class="combo-tag">Conteúdo para ADS</p><h3 class="combo-title">Vídeo para tráfego pago</h3><ul class="combo-items"><li>2h de captação</li><li>1 vídeo para redes sociais (até 90s)</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 750</p></div>
-    <div class="combo-card reveal"><p class="combo-tag">Rotina semanal</p><h3 class="combo-title">Conteúdo da semana</h3><ul class="combo-items"><li>2h de captação</li><li>3 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 1.020</p></div>
-    <div class="combo-card reveal d1"><p class="combo-tag">Multi-conteúdo</p><h3 class="combo-title">Gravação + vários vídeos</h3><ul class="combo-items"><li>4h de captação</li><li>5 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 1.600</p></div>
-    <div class="combo-card reveal"><p class="combo-tag">Conteúdo do mês</p><h3 class="combo-title">Diária de produção</h3><ul class="combo-items"><li>8h de captação (dia completo)</li><li>10 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 2.400</p></div>
-    <div class="combo-card reveal d1"><p class="combo-tag">Com imagens aéreas</p><h3 class="combo-title">Vídeos + drone</h3><ul class="combo-items"><li>4h de captação + 1h de drone DJI</li><li>5 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 2.200+</p></div>
+    <div class="combo-card reveal"><p class="combo-tag">Para começar</p><h3 class="combo-title">Primeiro conteúdo</h3><ul class="combo-items"><li>1h de captação</li><li>1 vídeo para redes sociais (até 90s)</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 590</p></div>
+    <div class="combo-card reveal d1"><p class="combo-tag">Conteúdo para ADS</p><h3 class="combo-title">Vídeo para tráfego pago</h3><ul class="combo-items"><li>2h de captação</li><li>1 vídeo para redes sociais (até 90s)</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 790</p></div>
+    <div class="combo-card reveal"><p class="combo-tag">Rotina semanal</p><h3 class="combo-title">Conteúdo da semana</h3><ul class="combo-items"><li>2h de captação</li><li>3 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 1.140</p></div>
+    <div class="combo-card reveal d1"><p class="combo-tag">Multi-conteúdo</p><h3 class="combo-title">Gravação + vários vídeos</h3><ul class="combo-items"><li>4h de captação</li><li>5 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 1.800</p></div>
+    <div class="combo-card reveal"><p class="combo-tag">Conteúdo do mês</p><h3 class="combo-title">Diária de produção</h3><ul class="combo-items"><li>8h de captação (dia completo)</li><li>10 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 3.000</p></div>
+    <div class="combo-card reveal d1"><p class="combo-tag">Com imagens aéreas</p><h3 class="combo-title">Vídeos + drone</h3><ul class="combo-items"><li>4h de captação + 1h de drone DJI</li><li>5 vídeos para redes sociais</li><li>Equipamentos inclusos</li></ul><div class="combo-hr"></div><p class="combo-price">R$ 2.600+</p></div>
   </div>
   <p class="combo-footnote reveal">Valores de referência, calculados com as tabelas acima. Todo projeto recebe uma proposta personalizada após o briefing.</p>
   <div class="reveal" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px">
@@ -808,7 +848,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <span class="sec-tag reveal">Perguntas frequentes</span>
   <h2 class="sec-title reveal" id="faq-h2">Dúvidas sobre este serviço</h2>
   <div class="sec-line reveal"></div>
-  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa produção de vídeo para redes sociais em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A edição de vídeos para redes sociais (até 90 segundos) custa a partir de R$ 150 por vídeo na Cinegraphya. Projetos com múltiplos vídeos têm desconto progressivo. Solicite um orçamento personalizado.</div></div></div>
+  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa produção de vídeo para redes sociais em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A edição de vídeos para redes sociais (até 90 segundos) custa a partir de R$ 190 por Reels (cortes a partir de R$ 90) na Cinegraphya. Projetos com múltiplos vídeos têm desconto progressivo. Solicite um orçamento personalizado.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">A Cinegraphya produz Reels para Instagram em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. A Cinegraphya produz Reels, vídeos para TikTok, Shorts para YouTube e vídeos para LinkedIn em Belo Horizonte. O conteúdo é editado com trilha, legendas e exportado nas proporções corretas para cada plataforma.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Como funciona a produção de conteúdo mensal para redes sociais?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A Cinegraphya oferece pacotes mensais de conteúdo audiovisual para empresas. Em uma sessão de captação, produzimos múltiplos vídeos otimizados para diferentes plataformas, reduzindo o custo por vídeo e garantindo consistência de publicação.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Qual é o formato ideal de vídeo para o Instagram em 2026?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O formato Reels (9:16 vertical, até 90 segundos) é o que gera maior alcance orgânico no Instagram. A Cinegraphya produz vídeos nesse formato com edição profissional, cortes dinâmicos e trilha otimizada para retenção.</div></div></div>
@@ -977,6 +1017,74 @@ function sendH(){window.parent.postMessage({type:'resize',height:document.body.s
 window.addEventListener('load',sendH);
 window.addEventListener('resize',sendH);
 new MutationObserver(sendH).observe(document.body,{childList:true,subtree:true,attributes:true});
+</script>
+<!-- Popup de vídeo (portfólio) -->
+<div class="vmodal" id="vmodal" role="dialog" aria-modal="true" aria-label="Vídeo do portfólio" aria-hidden="true">
+  <div class="vmodal-box">
+    <button type="button" class="vmodal-close" id="vmodal-close" aria-label="Fechar vídeo">&times;</button>
+    <div class="vmodal-frame" id="vmodal-frame"></div>
+  </div>
+</div>
+<script>
+/* vmodal:start */
+(function () {
+  var modal = document.getElementById('vmodal');
+  if (!modal) return;
+  var frame = document.getElementById('vmodal-frame');
+  var closeBtn = document.getElementById('vmodal-close');
+  var lastTrigger = null;
+
+  function openVideo(id, trigger) {
+    lastTrigger = trigger || null;
+    frame.innerHTML = '<div class="vmodal-spin" aria-hidden="true"></div>';
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    f.title = 'Vídeo do portfólio da Cinegraphya';
+    f.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+    f.setAttribute('allowfullscreen', '');
+    f.addEventListener('load', function () {
+      f.className = 'is-ready';
+      var s = frame.querySelector('.vmodal-spin');
+      if (s && s.parentNode) s.parentNode.removeChild(s);
+    });
+    frame.appendChild(f);
+    document.documentElement.classList.add('vmodal-open');
+    modal.setAttribute('aria-hidden', 'false');
+    void modal.offsetWidth;                 /* garante que a transição dispare */
+    modal.classList.add('is-open');
+    try { closeBtn.focus({ preventScroll: true }); } catch (e) { closeBtn.focus(); }
+  }
+
+  function closeVideo() {
+    if (!modal.classList.contains('is-open')) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.documentElement.classList.remove('vmodal-open');
+    frame.innerHTML = '';                   /* remove o player: o vídeo para na hora */
+    if (lastTrigger && lastTrigger.focus) {
+      try { lastTrigger.focus({ preventScroll: true }); } catch (e) { lastTrigger.focus(); }
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target && e.target.closest ? e.target.closest('.vthumb') : null;
+    if (el) { e.preventDefault(); openVideo(el.getAttribute('data-yt'), el); }
+  });
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeVideo(); });   /* clique fora */
+  closeBtn.addEventListener('click', closeVideo);
+  document.addEventListener('keydown', function (e) {
+    if (!modal.classList.contains('is-open')) return;
+    if (e.key === 'Escape' || e.key === 'Esc') { closeVideo(); return; }
+    if (e.key === 'Tab') {                  /* mantém o foco dentro do popup */
+      var f = frame.querySelector('iframe');
+      var els = f ? [closeBtn, f] : [closeBtn];
+      var i = els.indexOf(document.activeElement);
+      if (e.shiftKey) { if (i <= 0) { e.preventDefault(); els[els.length - 1].focus(); } }
+      else if (i === els.length - 1 || i === -1) { e.preventDefault(); els[0].focus(); }
+    }
+  });
+})();
+/* vmodal:end */
 </script>
 </body>
 </html>
