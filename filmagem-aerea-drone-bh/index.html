@@ -228,13 +228,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 /* ════════════════════════════════════════════════════════
    QUOTE BAR
 ════════════════════════════════════════════════════════ */
-.quote-bar{background:#0F0F0A;
+.quote-bar{background:var(--bg3);
   border-bottom:1px solid var(--border);padding:22px 0}
 .quote-inner{display:flex;align-items:flex-start;gap:16px}
 .quote-mark{font-family:'Crimson Pro',serif;font-size:52px;
   color:var(--border2);line-height:1;flex-shrink:0;margin-top:-8px}
 .quote-text{font-family:'Crimson Pro',serif;font-style:italic;
-  font-size:clamp(14px,3vw,18px);color:#C0B8A8;line-height:1.6}
+  font-size:clamp(14px,3vw,18px);color:var(--body);line-height:1.6}
 .quote-attr{font-size:var(--fs-xs);font-weight:600;
   letter-spacing:.1em;text-transform:uppercase;
   color:var(--gold);margin-top:10px}
@@ -286,13 +286,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .price-table tr{border-bottom:1px solid var(--border)}
 .price-table tr:last-child{border-bottom:none}
 .price-table td{padding:14px 16px;background:var(--bg2)}
-.price-table tr:last-child td{background:#0F0F0A}
+.price-table tr:last-child td{background:var(--bg2)}
 .price-table td:first-child{font-size:var(--fs-sm);font-weight:500;
   color:var(--white);line-height:1.4}
 .price-table td:last-child{text-align:right;white-space:nowrap;
   font-family:'Bebas Neue',sans-serif;font-size:24px;
   color:var(--gold);letter-spacing:.04em;width:1%}
-.included-note{background:#0F0F0A;border:1px solid var(--border2);
+.included-note{background:var(--bg3);border:1px solid var(--border);
   border-top:none;padding:11px 16px;font-size:10px;font-weight:600;
   color:var(--muted);letter-spacing:.06em;text-transform:uppercase;
   margin-bottom:32px;line-height:1.6}
@@ -366,7 +366,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .rcard-stars{font-size:var(--fs-sm);color:var(--gold);
   letter-spacing:.08em;margin-bottom:10px}
 .rcard-text{font-family:'Crimson Pro',serif;font-style:italic;
-  font-size:var(--fs-base);color:#C0B8A8;
+  font-size:var(--fs-base);color:var(--body);
   line-height:1.65;flex:1;margin-bottom:14px}
 .rcard-name{font-size:var(--fs-xs);font-weight:600;
   letter-spacing:.06em;text-transform:uppercase;color:var(--white)}
@@ -588,7 +588,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       "name": "Quanto custa filmagem com drone em BH?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O serviço de drone está disponível a partir de R$ 550 por período de 1 hora, como adicional em qualquer pacote de captação da Cinegraphya. O valor final depende do escopo do projeto. Solicite um orçamento personalizado."
+        "text": "O serviço de drone está disponível a partir de R$ 800 por período de 1 hora, como adicional em qualquer pacote de captação da Cinegraphya. O valor final depende do escopo do projeto. Solicite um orçamento personalizado."
       }
     },
     {
@@ -677,7 +677,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <span class="sec-tag reveal">Perguntas frequentes</span>
   <h2 class="sec-title reveal" id="faq-h2">Dúvidas sobre este serviço</h2>
   <div class="sec-line reveal"></div>
-  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa filmagem com drone em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O serviço de drone está disponível a partir de R$ 550 por período de 1 hora, como adicional em qualquer pacote de captação da Cinegraphya. O valor final depende do escopo do projeto. Solicite um orçamento personalizado.</div></div></div>
+  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa filmagem com drone em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O serviço de drone está disponível a partir de R$ 800 por período de 1 hora, como adicional em qualquer pacote de captação da Cinegraphya. O valor final depende do escopo do projeto. Solicite um orçamento personalizado.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">A Cinegraphya tem autorização para voar com drone em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Todos os voos são realizados com drone DJI certificado e em conformidade com as regulamentações da ANAC e DECEA para operação de drones no Brasil. A Cinegraphya possui as autorizações necessárias para operar em Belo Horizonte e região.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">O serviço de drone inclui edição do material aéreo?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. Podemos entregar o material bruto em 4K ou já editado e integrado à produção final. A edição é cobrada conforme o formato desejado — vídeo para redes sociais ou vídeo institucional.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Em quais cidades da Grande BH a Cinegraphya faz filmagem com drone?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Atendemos Belo Horizonte e toda a Grande BH, incluindo Nova Lima, Contagem, Betim, Lagoa Santa, Sete Lagoas e cidades próximas, sem taxa de deslocamento adicional. Para cidades fora da Grande BH, o deslocamento é orçado conforme o projeto.</div></div></div>
