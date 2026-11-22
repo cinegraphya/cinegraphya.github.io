@@ -228,13 +228,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 /* ════════════════════════════════════════════════════════
    QUOTE BAR
 ════════════════════════════════════════════════════════ */
-.quote-bar{background:#0F0F0A;
+.quote-bar{background:var(--bg3);
   border-bottom:1px solid var(--border);padding:22px 0}
 .quote-inner{display:flex;align-items:flex-start;gap:16px}
 .quote-mark{font-family:'Crimson Pro',serif;font-size:52px;
   color:var(--border2);line-height:1;flex-shrink:0;margin-top:-8px}
 .quote-text{font-family:'Crimson Pro',serif;font-style:italic;
-  font-size:clamp(14px,3vw,18px);color:#C0B8A8;line-height:1.6}
+  font-size:clamp(14px,3vw,18px);color:var(--body);line-height:1.6}
 .quote-attr{font-size:var(--fs-xs);font-weight:600;
   letter-spacing:.1em;text-transform:uppercase;
   color:var(--gold);margin-top:10px}
@@ -286,13 +286,13 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .price-table tr{border-bottom:1px solid var(--border)}
 .price-table tr:last-child{border-bottom:none}
 .price-table td{padding:14px 16px;background:var(--bg2)}
-.price-table tr:last-child td{background:#0F0F0A}
+.price-table tr:last-child td{background:var(--bg2)}
 .price-table td:first-child{font-size:var(--fs-sm);font-weight:500;
   color:var(--white);line-height:1.4}
 .price-table td:last-child{text-align:right;white-space:nowrap;
   font-family:'Bebas Neue',sans-serif;font-size:24px;
   color:var(--gold);letter-spacing:.04em;width:1%}
-.included-note{background:#0F0F0A;border:1px solid var(--border2);
+.included-note{background:var(--bg3);border:1px solid var(--border);
   border-top:none;padding:11px 16px;font-size:10px;font-weight:600;
   color:var(--muted);letter-spacing:.06em;text-transform:uppercase;
   margin-bottom:32px;line-height:1.6}
@@ -366,7 +366,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 .rcard-stars{font-size:var(--fs-sm);color:var(--gold);
   letter-spacing:.08em;margin-bottom:10px}
 .rcard-text{font-family:'Crimson Pro',serif;font-style:italic;
-  font-size:var(--fs-base);color:#C0B8A8;
+  font-size:var(--fs-base);color:var(--body);
   line-height:1.65;flex:1;margin-bottom:14px}
 .rcard-name{font-size:var(--fs-xs);font-weight:600;
   letter-spacing:.06em;text-transform:uppercase;color:var(--white)}
@@ -588,7 +588,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       "name": "Quanto custa um vídeo institucional em BH?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A edição de um vídeo institucional de até 5 minutos custa a partir de R$ 800 na Cinegraphya. O valor total do projeto — incluindo captação e edição — varia conforme o escopo. Solicite um orçamento personalizado."
+        "text": "A edição de um vídeo institucional de até 5 minutos custa R$ 1.290 na Cinegraphya. O valor total do projeto — incluindo captação e edição — varia conforme o escopo. Solicite um orçamento personalizado."
       }
     },
     {
@@ -677,7 +677,7 @@ body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   <span class="sec-tag reveal">Perguntas frequentes</span>
   <h2 class="sec-title reveal" id="faq-h2">Dúvidas sobre este serviço</h2>
   <div class="sec-line reveal"></div>
-  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa um vídeo institucional em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A edição de um vídeo institucional de até 5 minutos custa a partir de R$ 800 na Cinegraphya. O valor total do projeto — incluindo captação e edição — varia conforme o escopo. Solicite um orçamento personalizado.</div></div></div>
+  <div class="faq-list"><div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto custa um vídeo institucional em BH?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A edição de um vídeo institucional de até 5 minutos custa R$ 1.290 na Cinegraphya. O valor total do projeto — incluindo captação e edição — varia conforme o escopo. Solicite um orçamento personalizado.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Quanto tempo leva para produzir um vídeo institucional?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">O prazo de entrega da edição finalizada é de até 15 dias úteis após a captação. O cliente tem 5 dias úteis para solicitar ajustes e 2 rodadas de revisão sem custo adicional.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">O que está incluído na produção de um vídeo institucional da Cinegraphya?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">A produção inclui briefing estratégico, roteiro, captação em 4K com áudio dedicado, edição profissional com color grading, trilha sonora, legendas e vinheta. A entrega é feita via Google Drive.</div></div></div>
 <div class="faq-item reveal"><button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">A Cinegraphya já produziu vídeos institucionais para grandes empresas?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-inner">Sim. A Cinegraphya tem mais de 15 anos de experiência e portfólio que inclui produções para Globo, Band, Sebrae, Santa Casa e Metrô BH, entre outros clientes corporativos em Belo Horizonte e no Brasil.</div></div></div>
