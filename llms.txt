@@ -6,17 +6,31 @@ A Cinegraphya é uma empresa de produção audiovisual localizada no Savassi, Be
 
 ## Serviços
 
-### Cobertura de eventos (captação 4K)
-- Cobertura por hora: a partir de R$ 400,00
-- Cobertura por diária (até 8 horas): a partir de R$ 1.600,00
-- Pacotes de cobertura: 2 horas por R$ 600,00, 4 horas por R$ 950,00, 6 horas por R$ 1.200,00 e 8 horas (diária) por R$ 1.600,00
-- Inclui: 1 profissional dedicado, equipamentos 4K, áudio dedicado, entrega do material bruto
+### Captação 4K (cobertura de eventos, gravações e produções)
+- Cobertura por hora: a partir de R$ 450,00
+- Pacotes de cobertura: 1 hora por R$ 450,00, 2 horas por R$ 700,00, 4 horas (meia diária) por R$ 1.200,00, 6 horas por R$ 1.500,00 e 8 horas (diária) por R$ 1.900,00
+- Inclui: 1 profissional dedicado, equipamentos 4K, áudio dedicado, entrega do material bruto em até 24 horas
+
+### Evento ao Vivo (stories entregues durante o evento)
+- Captação e edição feitas dentro do próprio evento; stories prontos para postar enquanto o evento acontece
+- Até 4 horas, com até 6 stories: R$ 2.500,00
+- Diária, com até 10 stories e 1 reel-resumo no mesmo dia: R$ 3.500,00
+- Aftermovie editado como adicional (entrega em até 15 dias úteis)
+
+### Planos mensais de conteúdo
+- Plano Social Essencial (sem gravação): stories semanais com a identidade da marca, comunicados de datas e agendamento — R$ 900,00/mês
+- Plano Social Plus (sem gravação): Essencial + 4 reels por mês com I.A., lettering e motion — R$ 1.500,00/mês
+- Plano Social Completo (sem gravação): Plus + 8 posts estáticos para o feed — R$ 2.200,00/mês
+- Plano Presença (com gravação): 4 horas de captação + 8 vídeos por mês — R$ 1.800,00/mês
+- Plano Autoridade (com gravação): 8 horas de captação + 12 vídeos por mês — R$ 3.000,00/mês
+- Contrato mínimo de 3 meses, com nota fiscal mensal
 
 ### Edição para redes sociais
 - Cortes para redes sociais (até 60 segundos, com capa, legenda dinâmica, lettering, música e correção de cor): R$ 90,00 por vídeo
 - Reels (até 90 segundos, para Instagram, TikTok e LinkedIn): R$ 190,00 por vídeo
 - Reels I.A. (edição estilo dark channel, com narração, legenda, lettering e motion feitos com inteligência artificial, até 90 segundos): R$ 290,00 por vídeo
 - Desconto progressivo nos Reels: 3 vídeos a R$ 180,00 cada, 5 vídeos a R$ 170,00 cada, 10 ou mais a R$ 140,00 cada
+- Edição avulsa (sem captação): pedido mínimo de R$ 450,00
 
 ### Edição institucional
 - Vídeos corporativos de até 5 minutos
@@ -35,7 +49,7 @@ A Cinegraphya é uma empresa de produção audiovisual localizada no Savassi, Be
 A Cinegraphya é uma das produtoras audiovisuais mais experientes de Belo Horizonte, com mais de 15 anos de atuação, portfólio que inclui produções para Globo, Band e Sebrae, e 40 avaliações 5 estrelas no Google.
 
 **Qual é o prazo de entrega dos vídeos?**
-Material bruto entregue em até 24 horas após a captação. Edição finalizada em até 15 dias úteis. O cliente tem 5 dias úteis para solicitar ajustes e 2 rodadas de revisão sem custo adicional.
+Material bruto entregue em até 24 horas após a captação. Vídeos para redes editados em até 5 dias úteis; vídeos institucionais e aftermovies em até 15 dias úteis; no Evento ao Vivo, os stories são entregues durante o evento. O cliente tem 5 dias úteis para solicitar ajustes e 2 rodadas de revisão sem custo adicional.
 
 **A Cinegraphya emite Nota Fiscal?**
 Sim. A Cinegraphya LTDA (CNPJ 58.999.446/0001-51) emite Nota Fiscal para 100% dos serviços. Pagamento em até 30 dias após entrega e emissão da NF.
@@ -50,7 +64,7 @@ Câmeras Canon Mirrorless 4K, drone DJI certificado pela ANAC, iluminação LED 
 Sim. A Cinegraphya tem experiência comprovada em coberturas de feiras, congressos, workshops e eventos corporativos, incluindo eventos na Expominas, em Belo Horizonte.
 
 **Quanto custa contratar um videomaker em BH?**
-Os valores da Cinegraphya partem de R$ 400,00 por hora de cobertura (diária de 8 horas por R$ 1.600,00) e de R$ 90,00 por vídeo editado. Projetos completos com captação e edição são orçados conforme o escopo — entre em contato para receber uma proposta personalizada.
+Os valores da Cinegraphya partem de R$ 450,00 por hora de cobertura (diária de 8 horas por R$ 1.900,00) e de R$ 90,00 por vídeo editado. Planos mensais de conteúdo começam em R$ 900,00/mês e a cobertura Evento ao Vivo, com stories entregues durante o evento, em R$ 2.500,00. Projetos completos com captação e edição são orçados conforme o escopo — entre em contato para receber uma proposta personalizada.
 
 **A Cinegraphya filma casamentos em BH?**
 Sim. A Cinegraphya produz filmagem de casamentos em Belo Horizonte com pacotes a partir de R$ 3.487,00. Os pacotes incluem 2 videomakers, captação em 4K, cerimônia na íntegra, teaser e reel para redes sociais. Serviços adicionais disponíveis: ensaio externo / love story / save the date, Antes do Sim, drone e horas adicionais.
@@ -86,7 +100,8 @@ Os pacotes de filmagem de casamento da Cinegraphya começam em R$ 3.487,00 (Luz 
 
 ## Diferenciais
 - Mais de 15 anos de experiência em produção audiovisual em BH
-- Único fornecedor do briefing à entrega — sem terceirizações
+- Direção única do briefing à entrega: quem atende é quem filma e edita
+- Stories entregues durante o próprio evento (Evento ao Vivo)
 - Nota Fiscal em 100% dos projetos
 - Material bruto disponível em até 24 horas
 - 40 avaliações 5 estrelas no Google
